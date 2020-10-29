@@ -4,8 +4,10 @@ import { motion,useCycle } from 'framer-motion'
 
 const loadervariants = {
   animationOne: {
-    x: [-20, 20],
-    y: [0, -30],
+    // x: [-150,-110],
+    // y: [-320, -360],
+    x: [20, 40],
+    y: [0, 70], 
     transition: {
       x: {
         yoyo: Infinity,
@@ -13,14 +15,16 @@ const loadervariants = {
       },
       y: {
         yoyo: Infinity,
-        duration: 0.25,
+        duration: 1,
         ease: 'easeOut'
       }
     }
   },
   animationTwo: {
-    y: [0, -40],
-    x: 0,
+    // x: [30,-290],
+    // y: [0, 40],
+    x: [20, 40],
+    y: [0, 70],
     transition: {
       y: {
         yoyo: Infinity,
@@ -41,8 +45,8 @@ const Loader = () => {
       <motion.div onHoverEnd={() => cycleAnimation()} className='loader'
         variants={loadervariants}
         animate={animation}
-      >
-      </motion.div>
+      />
+      {/* </motion.div> */}
       {/* <div >Cycle Loader</div> */}
     </>
   )

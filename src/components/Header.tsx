@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import git2 from './github_2.svg';
-import git3 from './github_3.svg';
+// import git2 from './github_2.svg';
+// import git3 from './github_3.svg';
+
 
 const svgVariants = {
   hidden: { rotate: -180 },
@@ -30,7 +31,7 @@ const Header = () => {
   return (
     <header>
       <motion.div className="logo"
-        drag
+        drag={true}
         dragConstraints={{ left: 0, top: 0, right: 0, bottom: 0 }}
         dragElastic={0.5}
       >
@@ -66,7 +67,9 @@ const Header = () => {
         transition={{ delay: 0.5,type:'spring',stiffness: 120}}
       >
         <h1>FindMyRepo</h1>
+        
       </motion.div>
+      
     </header>
   )
 }

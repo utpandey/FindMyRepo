@@ -21,7 +21,7 @@ const modal = {
 }
 const Modal: React.FunctionComponent<IModal> = ({ showModal, setShowModal }) => {
   return (
-    <AnimatePresence exitBeforeEnter>
+    <AnimatePresence exitBeforeEnter={true}>
       { showModal && (
         <motion.div className="backdrop"
           variants={backdrop}

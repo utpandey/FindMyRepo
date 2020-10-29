@@ -81,10 +81,10 @@ const Base: FunctionComponent<IBaseProps> = ({ addBase, base, toppings }) => {
     >
 
       <h3>Step 1: Choose Your Base</h3>
-      <ul>
+      {/* <ul>
         
         {bases.map((Bases:string) => {
-          let spanClass = base === Bases ? 'active' : '';       
+          const spanClass = base === Bases ? 'active' : '';       
           return (
             <motion.li key={Bases} onClick={(): void => addBase(Bases)}
               variants={listVariants}
@@ -95,7 +95,7 @@ const Base: FunctionComponent<IBaseProps> = ({ addBase, base, toppings }) => {
           
           )
         })}
-      </ul>
+      </ul> */}
 
       {base && (
         <motion.div className="next"

@@ -51,7 +51,7 @@ const buttonVariants = {
 }
 
 const Toppings: React.FunctionComponent<IPizza> = ({ addTopping,  base, toppings }) => {
-  let TToppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
+  const TToppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
 
   return (
     <motion.div className="toppings container"
@@ -64,7 +64,7 @@ const Toppings: React.FunctionComponent<IPizza> = ({ addTopping,  base, toppings
       <h3>Step 2: Choose Toppings</h3>
       <ul>
         {TToppings.map((topping: string) => {
-          let spanClass = toppings.includes(topping) ? 'active' : '';
+          const spanClass = toppings.includes(topping) ? 'active' : '';
           return (
             <motion.li key={topping} onClick={() => addTopping(topping)}
               variants={containerVariants}

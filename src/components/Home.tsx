@@ -41,18 +41,32 @@ const Home = () => {
       animate='visible'
       exit='exit'
     >
-      <motion.h2>
-        Welcome to Pizza Joint
-      </motion.h2>
-      <Link to="/base">
+      <div>
+        <Link to='/users'>
+          <motion.h3
+            whileHover={{color: 'black',scale: '0.9'}}
+          >
+          User
+          </motion.h3>
+        </Link>
+        <Link to='/repo'>
+          <motion.h3
+            whileHover={{color: 'black',scale: '0.9'}}
+          >
+              Repository
+          </motion.h3>
+        </Link>
+      </div>
+      <Loader />
+      {/* <Link to="/base">
         <motion.button
           variants={buttonVariants}
           whileHover='hover'
         >
           Create Your Pizza
         </motion.button>
-      </Link>
-      <Loader />
+      </Link> */}
+      
     </motion.div>
   )
 }
