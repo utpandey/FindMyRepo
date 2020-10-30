@@ -1,0 +1,24 @@
+.about{
+    width: 95%;
+    height: 100%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: 
+    repeat(2,1fr);
+    grid-template-rows:
+    repeat(5,1fr);
+    color: black;
+
+    &__item {
+        padding: 10px;
+        border: 1px solid purple;
+    }
+    &__item>h3 {
+        font-size: 20px;
+        color: black;
+    }
+    &__item>p {
+        font-size: 15px;
+        color: black;
+    }
+}

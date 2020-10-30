@@ -4,28 +4,29 @@ import {useQuery} from "@apollo/react-hooks";
 import {useDebounce} from "use-debounce";
 import {SEARCH_FOR_REPOS,SEARCH_FOR_USERS} from "./queries";
 import { IUser } from './interfaces';
-
+import { About,Profile} from './Details';
 
 const User: React.FC<IUser> = ({searchTerm}) => {
-  const [isActive, setActive] = useState(false);
-  const [expandedRepo, setExpandedRepo] = useState(null);
-  const [debouncedSearchTerm] = useDebounce(searchTerm, 3000);
-  const {data, loading, error} = useQuery(SEARCH_FOR_USERS,
-    {variables: {search_term: debouncedSearchTerm}}
+    const [isActive, setActive] = useState(false);
+    const [expandedRepo, setExpandedRepo] = useState(null);
+    const [tabActive, setTabActive] = useState<string>("About");
+    const [debouncedSearchTerm] = useDebounce(searchTerm, 3000);
+    const {data, loading, error} = useQuery(SEARCH_FOR_USERS,
+        {variables: {search_term: debouncedSearchTerm}}
     );
 
-  
+
   // useEffect(() => {
   //   setExpandedRepo(null);
   // }, [data]);
 
-  if (loading) {
-    return (
-      <div >
-        Loading...
-      </div>
+    if (loading) {
+        return (
+            <div >
+            Loading...
+            </div>
     );
-  }
+}
 
   if (error) {
     return (
@@ -44,7 +45,24 @@ const User: React.FC<IUser> = ({searchTerm}) => {
   //     </div>
   //   )
   // }
-  console.log(window.onload);
+  console.log(data.user.issues);
+  console.log(typeof(data.user.issues));
+  console.log(Object.values(data.user.issues)[1]);
+  // console.log(data.user.issues(totalCount));
+  console.log("done here");
+  function counter(obj:any) {
+      let count = 0;
+      
+    for (const property in obj) {
+        if (Object.prototype.hasOwnProperty.call(obj, property)) {
+            count++;
+        }
+    }
+
+    return count;
+  }
+  const counterM = counter(data.user.issues);
+  // console.log(counterM);
 // window.onload = function() {
 //     document.querySelector('.cont_modal').className = "cont_modal";
 // }
@@ -107,22 +125,35 @@ console.log(data.user);
                         <div className="cont_tabs">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onClick={() => setTabActive("Profile")}>
                                         <h4>Profile</h4>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" onClick={() => setTabActive("About")}>
                                         <h4>About</h4>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                             {/* <div className="extender_cont">
-                                
+
                             </div> */}
                         <div className="cont_text_det_preparation">
-                            <div className="cont_title_preparation">
+                            {tabActive === "About" && <About 
+                                bio={data.user.bio}
+                                company={data.user.company}
+                                createdAt={data.user.createAt}
+                                email={data.user.email}
+                                name={data.user.name}
+                                followers={Object.values(data.user.followers)[1]}
+                                following={Object.values(data.user.following)[1]}
+                                issues={Object.values(data.user.issues)[1]}
+                                weburl={data.user.websiteUrl}
+                                location={data.user.location}
+                            />}
+                            {tabActive === "Profile" && <Profile />}
+                            {/* <div className="cont_title_preparation">
                                 <p>STEP 1</p>
                             </div>
                             <div className="cont_info_preparation">
@@ -136,9 +167,10 @@ console.log(data.user);
                                     <p>Heat oil in a large skillet over medium-low head. Add onion and bell papper. Cook gently until very soft, about 20 minutes. Add garlic and cook until tender, 1 to 2 minutes; stir in cumin, paprika and cook 1 minute.
                                         Pour in tomatoes and season with 3/4 teaspoon salt and 1/4 teaspoon pepper;</p>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="cont_text_det_">
+                            
                             {/* <div className="cont_title_preparation">
                                 <p>STEP 1</p>
                             </div>

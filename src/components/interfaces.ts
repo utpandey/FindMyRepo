@@ -39,3 +39,16 @@ export interface ISearchBar {
 export interface IUser {
   searchTerm: any
 }
+
+export interface IAbout {
+  company: string,
+  bio: string,
+  following: any,
+  followers: any,
+  issues: any,
+  location: string,
+  name: string,
+  createdAt: any,
+  email: any,
+  weburl: any
+}
