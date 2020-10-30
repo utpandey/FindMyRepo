@@ -9,7 +9,7 @@
 ./trytra
 # testing
 /coverage
-
+.env
 # production
 /build
 

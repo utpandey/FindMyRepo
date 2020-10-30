@@ -118,16 +118,17 @@ console.log(data.user);
                                 </li>
                             </ul>
                         </div>
-
+                            {/* <div className="extender_cont">
+                                
+                            </div> */}
                         <div className="cont_text_det_preparation">
-                            {/* <div className="cont_title_preparation">
+                            <div className="cont_title_preparation">
                                 <p>STEP 1</p>
                             </div>
                             <div className="cont_info_preparation">
                                 <p>Heat oven to 375 degress</p>
                             </div>
                             <div className="cont_text_det_preparation">
-
                                 <div className="cont_title_preparation">
                                     <p>STEP 2</p>
                                 </div>
@@ -135,7 +136,7 @@ console.log(data.user);
                                     <p>Heat oil in a large skillet over medium-low head. Add onion and bell papper. Cook gently until very soft, about 20 minutes. Add garlic and cook until tender, 1 to 2 minutes; stir in cumin, paprika and cook 1 minute.
                                         Pour in tomatoes and season with 3/4 teaspoon salt and 1/4 teaspoon pepper;</p>
                                 </div>
-                            </div> */}
+                            </div>
                         </div>
                         <div className="cont_text_det_">
                             {/* <div className="cont_title_preparation">
