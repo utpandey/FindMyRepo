@@ -6,10 +6,10 @@
 .pnp.js
 /.vscode
 /tryta
-./trytra
+trytra/
+.env
 # testing
 /coverage
-.env
 # production
 /build
 
