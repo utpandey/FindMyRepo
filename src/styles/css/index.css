@@ -289,7 +289,7 @@ header .pizza-svg {
 .cont_photo {
   position: relative;
   width: 350px;
-  height: 500px;
+  height: 300px;
   overflow: hidden;
   background-color: #eee;
   border-radius: 5px;
@@ -310,7 +310,7 @@ header .pizza-svg {
 
 .cont_img_back > img {
   width: 100%;
-  height: 90%;
+  height: 100%;
   opacity: 0.9;
   -webkit-transition: all 0.5s;
   -o-transition: all 0.5s;
@@ -327,7 +327,7 @@ header .pizza-svg {
   top: 0px;
   left: 340px;
   margin-left: 10px;
-  height: 500px;
+  height: 300px;
   float: left;
   border-radius: 5px;
   z-index: 3;
@@ -389,8 +389,7 @@ header .pizza-svg {
 .cont_tabs {
   position: relative;
   float: left;
-  width: 500px;
-  border-bottom: 3px solid #EDEDEC; }
+  width: 500px; }
 
 .cont_tabs > ul {
   display: flex;
@@ -399,15 +398,13 @@ header .pizza-svg {
   background-color: #eee; }
 
 .cont_tabs > ul > li > a {
-  border-top: 7px solid #ED346C;
+  border-top: 3px solid #ED346C;
   position: relative;
   display: block;
   float: left;
-  padding-top: 15px;
   color: #241C3E;
   text-decoration: none;
-  margin-left: 15px;
-  font-size: 14px; }
+  font-size: 11.5px; }
 
 .cont_tabs > ul > li > a:hover {
   border-top: 0px;
@@ -484,11 +481,11 @@ header .pizza-svg {
   position: relative;
   float: left;
   width: 100%;
-  height: 500px;
+  height: 300px;
   overflow: hidden; }
 
 .cont_text_det_preparation {
-  height: 400px;
+  height: 300px;
   position: relative;
   width: 500px; }
 
@@ -529,11 +526,10 @@ header .pizza-svg {
   grid-template-rows: repeat(5, 1fr);
   color: black; }
   .about__item {
-    padding: 10px;
-    border: 1px solid purple; }
+    padding: 5px; }
   .about__item > h3 {
-    font-size: 20px;
+    font-size: 10px;
     color: black; }
   .about__item > p {
-    font-size: 15px;
+    font-size: 10px;
     color: black; }

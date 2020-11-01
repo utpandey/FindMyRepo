@@ -1,7 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 // import git2 from './github_2.svg';
 // import git3 from './github_3.svg';
+import {withRouter} from 'react-router';
 
 
 const svgVariants = {
@@ -66,7 +68,14 @@ const Header = () => {
         animate={{ y: -10, }}
         transition={{ delay: 0.5,type:'spring',stiffness: 120}}
       >
-        <h1>FindMyRepo</h1>
+
+        <Link to='/'>
+          <motion.h1
+            // whileHover={{color: 'black',scale: '0.9'}}
+          >
+          FindMyRepo
+          </motion.h1>
+        </Link>
         
       </motion.div>
       
@@ -74,4 +83,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default withRouter(Header);

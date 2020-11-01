@@ -1,19 +1,21 @@
 
 import React, { useState } from 'react';
-import { Route, Switch,useLocation } from "react-router-dom";
+import {BrowserRouter as Route, Switch,useLocation,Router } from "react-router-dom";
 import Header from './components/Header';
 import Home from './components/Home';
-
+import { createBrowserHistory } from 'history';
 // import Modal from './components/Modal';
 import UsersPage from './components/UsersPage';
 import {AnimatePresence} from 'framer-motion'
+//import { Router } from '@material-ui/icons';
 
-function App(): JSX.Element {
+function App() {
   
   const location = useLocation();
-  const [base, setBase] = useState<string>("");
-  const [toppings, settToppings] = useState<string[]>([]);
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const history = createBrowserHistory();
+  // const [base, setBase] = useState<string>("");
+  // const [toppings, settToppings] = useState<string[]>([]);
+  // const [showModal, setShowModal] = useState<boolean>(false);
 
   // const addBase = (base: string) => {
   //   setBase(base )
@@ -32,8 +34,8 @@ function App(): JSX.Element {
 
   //  onExitComplete={() => setShowModal(false)}
   return (
-    <>
-      
+    <Router history={history}>
+    <React.Fragment>
         <Header />
         {/* <Modal showModal={showModal} setShowModal={setShowModal} /> */}
           <AnimatePresence exitBeforeEnter={true}>
@@ -47,17 +49,23 @@ function App(): JSX.Element {
               <Route path="/order">
                 <Order addBase={addBase}  base={base} toppings={toppings} setShowModal={setShowModal}/>
               </Route> */}
-              <Route path="/users">
+               {/* component={Home} component={UsersPage} / */}
+             
+              <Route path="/users" >
                 <UsersPage />
-              </Route>  
-              <Route path="/">
+              </Route>
+              <Route exact path="/" >
                 <Home />
               </Route>
+                {/* <UsersPage /> */} 
+              
+                {/* <Home />
+              </Route> */}
               
               </Switch>
           </AnimatePresence>
-        
-    </>
+        </React.Fragment>
+        </Router>
   );
 }
 

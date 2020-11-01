@@ -6,6 +6,7 @@ import {SEARCH_FOR_REPOS,SEARCH_FOR_USERS} from "./queries";
 import { IUser } from './interfaces';
 import { About,Profile} from './Details';
 
+
 const User: React.FC<IUser> = ({searchTerm}) => {
     const [isActive, setActive] = useState(false);
     const [expandedRepo, setExpandedRepo] = useState(null);
@@ -49,44 +50,7 @@ const User: React.FC<IUser> = ({searchTerm}) => {
   console.log(typeof(data.user.issues));
   console.log(Object.values(data.user.issues)[1]);
   // console.log(data.user.issues(totalCount));
-  console.log("done here");
-  function counter(obj:any) {
-      let count = 0;
-      
-    for (const property in obj) {
-        if (Object.prototype.hasOwnProperty.call(obj, property)) {
-            count++;
-        }
-    }
 
-    return count;
-  }
-  const counterM = counter(data.user.issues);
-  // console.log(counterM);
-// window.onload = function() {
-//     document.querySelector('.cont_modal').className = "cont_modal";
-// }
-// useEffect(() => {
-//     // document.querySelector('.cont_modal').className = "cont_modal";
-    
-//     }
-// },[]);
-
-// function handleClick() {
-//     console.log(clas);
-//     console.log(c);
-//     console.log(typeof(c));
-//     if (c % 2 === 0) {
-//         c++;
-//         setClas(false);
-        
-//     } else {
-//         c++;
-//         setClas(true);
-//         // document.querySelector('.cont_modal').className = "cont_modal cont_modal_active";
-        
-//     }
-// }
 const buttonClasses = classnames({"cont_modal": true},{"cont_modal_active": isActive})
 
 console.log(data.user.repositories)
@@ -152,7 +116,16 @@ console.log(data.user);
                                 weburl={data.user.websiteUrl}
                                 location={data.user.location}
                             />}
-                            {tabActive === "Profile" && <Profile />}
+                            {tabActive === "Profile" && <Profile 
+                                repositoriesContributedTo={Object.values(data.user.repositoriesContributedTo)[1]}
+                                commitComments={Object.values(data.user.commitComments)[1]} 
+                                issueComments={Object.values(data.user.issueComments)[1]} 
+                                pinnedItems={Object.values(data.user.pinnedItems)[1]} 
+                                pullRequests={Object.values(data.user.pullRequests)[1]} 
+                                repositories={Object.values(data.user.repositories)[1]}  
+                                starredRepositories={Object.values(data.user.starredRepositories)[1]} 
+                                watching={Object.values(data.user.watching)[1]} 
+                            />}
                             {/* <div className="cont_title_preparation">
                                 <p>STEP 1</p>
                             </div>

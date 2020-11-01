@@ -52,3 +52,14 @@ export interface IAbout {
   email: any,
   weburl: any
 }
+
+ export interface IProfile {
+  commitComments: any,
+  issueComments: any,
+  pinnedItems: any,
+  pullRequests: any,
+  repositories: any,
+  repositoriesContributedTo: any,
+  starredRepositories: any,
+  watching: any,
+ }
