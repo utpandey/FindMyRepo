@@ -2,10 +2,10 @@
 import React, { useState } from 'react';
 import {BrowserRouter as Route, Switch,useLocation,Router } from "react-router-dom";
 import Header from './components/Header';
-import Home from './components/Home';
+import Home from './pages/Home';
 import { createBrowserHistory } from 'history';
 // import Modal from './components/Modal';
-import UsersPage from './components/UsersPage';
+import UsersPage from './pages/UsersPage';
 import {AnimatePresence} from 'framer-motion'
 //import { Router } from '@material-ui/icons';
 
@@ -34,38 +34,7 @@ function App() {
 
   //  onExitComplete={() => setShowModal(false)}
   return (
-    <Router history={history}>
-    <React.Fragment>
-        <Header />
-        {/* <Modal showModal={showModal} setShowModal={setShowModal} /> */}
-          <AnimatePresence exitBeforeEnter={true}>
-            <Switch location={location} key={location.key}>
-              {/* <Route path="/base">
-                <Base addBase={addBase} base={base} toppings={toppings}  setShowModal={setShowModal} />
-              </Route>
-              <Route path="/toppings">
-                <Toppings addTopping={addTopping} base={base} toppings={toppings} />
-              </Route>
-              <Route path="/order">
-                <Order addBase={addBase}  base={base} toppings={toppings} setShowModal={setShowModal}/>
-              </Route> */}
-               {/* component={Home} component={UsersPage} / */}
-             
-              <Route path="/users" >
-                <UsersPage />
-              </Route>
-              <Route exact path="/" >
-                <Home />
-              </Route>
-                {/* <UsersPage /> */} 
-              
-                {/* <Home />
-              </Route> */}
-              
-              </Switch>
-          </AnimatePresence>
-        </React.Fragment>
-        </Router>
+    <div>sadsa</div>
   );
 }
 

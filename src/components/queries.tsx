@@ -113,7 +113,8 @@ export const SEARCH_FOR_REPOS = gql `
                 node {
                     ... on Repository {
                         name,
-                        
+                        url,
+                        forkCount,
                         owner {
                             login  
                         },

@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import { ISearchBar } from './interfaces';
+import { ISearchBar } from '../interfaces/interfaces';
 
 const SearchBar: React.FC<ISearchBar> = ({id,label,value, onChange,locked,active}) => {
 

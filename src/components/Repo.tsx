@@ -3,7 +3,7 @@ import classnames from "classnames"
 import {useQuery} from "@apollo/react-hooks";
 import {useDebounce} from "use-debounce";
 import {SEARCH_FOR_REPOS,SEARCH_FOR_USERS} from "./queries";
-import { IUser } from './interfaces';
+import { IUser } from '../interfaces/interfaces';
 import { About,Profile} from './Details';
  
 const Repo: React.FC<IUser> = ({searchTerm}) => {
@@ -12,7 +12,7 @@ const Repo: React.FC<IUser> = ({searchTerm}) => {
     const [expandedRepo, setExpandedRepo] = useState(null);
     const [tabActive, setTabActive] = useState<string>("About");
     const [debouncedSearchTerm] = useDebounce(searchTerm, 3000);
-    const {data, loading, error} = useQuery(SEARCH_FOR_USERS,
+    const {data, loading, error} = useQuery(SEARCH_FOR_REPOS,
         {variables: {search_term: debouncedSearchTerm}}
     );
 
@@ -46,12 +46,12 @@ const Repo: React.FC<IUser> = ({searchTerm}) => {
   //     </div>
   //   )
   // }
-  console.log(data.user.issues);
-  console.log(typeof(data.user.issues));
-  console.log(Object.values(data.user.issues)[1]);
-  // console.log(data.user.issues(totalCount));
-  console.log("done here");
-
+  console.log(data);
+  // console.log(typeof(data.user.issues));
+  // console.log(Object.values(data.user.issues)[1]);
+  // // console.log(data.user.issues(totalCount));
+  // console.log("done here");
+  
     return ( 
         <div>
             asd

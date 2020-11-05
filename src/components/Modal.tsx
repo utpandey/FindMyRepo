@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {motion,AnimatePresence} from 'framer-motion'
-import {IModal } from './interfaces';
+import {IModal } from '../interfaces/interfaces';
 
 const backdrop = {
   visible: { opacity: 1 },

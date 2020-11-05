@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import Loader from './Loader';
+import Loader from '../components/Loader';
 
 const homeContainerVariants = {
   hidden: {

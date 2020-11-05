@@ -3,7 +3,7 @@ import classnames from "classnames"
 import {useQuery} from "@apollo/react-hooks";
 import {useDebounce} from "use-debounce";
 import {SEARCH_FOR_REPOS,SEARCH_FOR_USERS} from "./queries";
-import { IUser } from './interfaces';
+import { IUser } from '../interfaces/interfaces';
 import { About,Profile} from './Details';
 
 

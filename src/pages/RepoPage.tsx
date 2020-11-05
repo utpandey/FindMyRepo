@@ -1,8 +1,8 @@
 import { ApolloProvider,InMemoryCache,NormalizedCacheObject } from '@apollo/react-hooks';
-import client from './client';
+import client from '../components/client';
 import React, { useState, useEffect } from 'react';
-import SearchBar from './SearchBar'
-import Repo from './Repo';
+import SearchBar from '../components/SearchBar'
+import Repo from '../components/Repo';
 import { motion } from 'framer-motion';
 // import git2 from './github_2.svg';
 // import git3 from './github_3.svg';

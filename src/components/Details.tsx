@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {IAbout,IProfile} from './interfaces';
+import {IAbout,IProfile} from '../interfaces/interfaces';
 
 export const About: React.FC<IAbout> = ({
     bio,
