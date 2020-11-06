@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import { createBrowserHistory } from 'history';
 // import Modal from './components/Modal';
 import UsersPage from './pages/UsersPage';
+import Repository from './components/Repository';
 import {AnimatePresence} from 'framer-motion'
 import * as serviceWorker from './serviceWorker';
 import { Switch,Link,Route, BrowserRouter as Router,useLocation } from 'react-router-dom';
@@ -30,12 +31,14 @@ const routing = (
                 <Order addBase={addBase}  base={base} toppings={toppings} setShowModal={setShowModal}/>
               </Route> */}
                {/* component={Home} component={UsersPage} / */}
-             
               <Route path="/users" >
                 <UsersPage />
               </Route>
-              <Route path="/repo" >
+              <Route path="/repolist" >
                 <RepoPage />
+              </Route>
+              <Route path='/repo'>
+                <Repository />
               </Route>
               <Route path="/" >
                 <Home />

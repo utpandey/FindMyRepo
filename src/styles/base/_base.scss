@@ -28,10 +28,14 @@ div {
     text-decoration: none;
 }
 
+html {
+    font-size: 62.5%
+}
+
 body {
     /* background: rgb(100, 0, 123); */
     background: radial-gradient(circle, #7E57C2 0%, #7E57C2 100%);
-    overflow: hidden;
+    overflow: visible;
 }
 
 button {
@@ -49,6 +53,7 @@ button {
 .container {
     max-width: 300px;
     margin: 100px auto 40px;
+    // border: 15px solid red;
 }
 
 .container h3 {
@@ -62,3 +67,4 @@ button {
     cursor: pointer;
 }
 
+// Variables

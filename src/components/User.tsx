@@ -29,14 +29,14 @@ const User: React.FC<IUser> = ({searchTerm}) => {
     );
 }
 
-  if (error) {
+if (error) {
     return (
-      <div
-      >
+    <div
+    >
         error
-      </div>
+    </div>
     )
-  }
+}
 
   // if (!data.search.repositoryCount) {
   //   return (
@@ -47,7 +47,7 @@ const User: React.FC<IUser> = ({searchTerm}) => {
   //   )
   // }
   console.log(data.user.issues);
-  console.log(typeof(data.user.issues));
+  // console.log(typeof(data.user.issues));
   console.log(Object.values(data.user.issues)[1]);
   // console.log(data.user.issues(totalCount));
 

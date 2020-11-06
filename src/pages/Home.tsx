@@ -49,7 +49,7 @@ const Home = () => {
           User
           </motion.h3>
         </Link>
-        <Link to='/repo'>
+        <Link to='/repolist'>
           <motion.h3
             whileHover={{color: 'black',scale: '0.9'}}
           >

@@ -115,18 +115,61 @@ export const SEARCH_FOR_REPOS = gql `
                         name,
                         url,
                         forkCount,
+                        openGraphImageUrl,
+                        nameWithOwner,
+                        mirrorUrl,
+                        licenseInfo {
+                            body,
+                            description,
+                            nickname,
+                            name,
+                            spdxId,
+                        },
+                        primaryLanguage {
+                            name,
+                            color
+                        },
+                        pullRequests(first:20)
+                        {
+                            edges {
+                                node {
+                                    additions,
+                                    body
+                                    closedAt,
+                                    # editor,
+                                    # hovercard(includeNotificationContexts:true)
+                                }
+                            }
+                        },
                         owner {
                             login  
                         },
                         stargazers {
                             totalCount
                         },
-                        descriptionHTML,
+                        description,
+                    },
+                    # ... on PullRequest {
+                    #     author{
+                    #         login,
+                    #         avatarUrl(size:1000),
+                    #         url
+                    #     },
+                    #     body,
+                    #     closed,
+                    #     closedAt,
+                    #     deletions,
+                    #     editor {
+                    #         login,
+                    #         avatarUrl(size:1000),
+                    #         url
+                    #     },
+                        
                     }
                 }
             }
         }
-    }
+    
 `;
 
 export const GET_REPO_ISSUES = gql `

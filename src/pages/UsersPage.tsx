@@ -41,7 +41,7 @@ const UsersPage = () => {
   return (
     <ApolloProvider client={client}>
       <div className="user__container">
-        <SearchBar value={searchTerm} onChange={setSearchTerm} id={1} locked={false} active={false} label="Username " />
+        <SearchBar value={searchTerm} onChange={setSearchTerm} id={1} locked={false} active={false} label="Username" />
         <User searchTerm={searchTerm} />
       </div>
     </ApolloProvider>
