@@ -4,7 +4,6 @@ import {useHistory} from 'react-router-dom';
 const RepoCard = ({repo}) => {
 
     const history = useHistory();
-    
     const {node: {name, description,openGraphImageUrl, 
                 owner: {login}, stargazers: {totalCount: totalStarCount}}} = {...repo };
     // const {node: {licenseInfo: {nickname = 'No License'} = {} } = {} } = repo || {}

@@ -12,21 +12,21 @@ export const SEARCH_FOR_USERS = gql `
             resourcePath
             websiteUrl
             url
-            commitComments(first:10){
+            commitComments(first:2){
                 totalCount
             }
             company
-            followers(first:10){
+            followers(first:2){
                 totalCount
             }
-            following(first:10){
+            following(first:2){
                 totalCount
             }
             isCampusExpert
-            issueComments(first:20){
+            issueComments(first:2){
                 totalCount
             }
-            issues(first:20){
+            issues(first:2){
                 totalCount
             }
             location
@@ -34,16 +34,16 @@ export const SEARCH_FOR_USERS = gql `
             organizations(first:5){
                 totalCount
             }
-            pinnedItems(first:10){
+            pinnedItems(first:2){
                 totalCount
             }
             projects(first:5){
                 totalCount
             }
-            pullRequests(first:20){
+            pullRequests(first:2){
                 totalCount
             }
-            repositories(first:20){
+            repositories(first:2){
                 totalCount
                 totalDiskUsage
                 edges{
@@ -64,7 +64,7 @@ export const SEARCH_FOR_USERS = gql `
                 id
             }
             twitterUsername
-            watching(first:10){
+            watching(first:2){
                 totalCount
             }
         }
@@ -106,41 +106,41 @@ export const SEARCH_FOR_REPOS = gql `
             remaining
             resetAt
         }
-        search(query: $search_term, type: REPOSITORY, first: 20) {
+        search(query: $search_term, type: REPOSITORY, first: 2) {
             repositoryCount,
             
             edges {
                 node {
                     ... on Repository {
                         name,
-                        url,
-                        forkCount,
+#                         url,
+#                         forkCount,
                         openGraphImageUrl,
-                        nameWithOwner,
-                        mirrorUrl,
-                        licenseInfo {
-                            body,
-                            description,
-                            nickname,
-                            name,
-                            spdxId,
-                        },
-                        primaryLanguage {
-                            name,
-                            color
-                        },
-                        pullRequests(first:20)
-                        {
-                            edges {
-                                node {
-                                    additions,
-                                    body
-                                    closedAt,
-                                    # editor,
-                                    # hovercard(includeNotificationContexts:true)
-                                }
-                            }
-                        },
+#                         nameWithOwner,
+#                         mirrorUrl,
+#                         licenseInfo {
+#                             body,
+#                             description,
+#                             nickname,
+#                             name,
+#                             spdxId,
+#                         },
+#                         primaryLanguage {
+#                             name,
+#                             color
+#                         },
+#                         pullRequests(first:2)
+#                         {
+#                             edges {
+#                                 node {
+#                                     additions,
+#                                     body
+#                                     closedAt,
+#                                     # editor,
+#                                     # hovercard(includeNotificationContexts:true)
+#                                 }
+#                             }
+#                         },
                         owner {
                             login  
                         },
@@ -148,27 +148,102 @@ export const SEARCH_FOR_REPOS = gql `
                             totalCount
                         },
                         description,
-                    },
-                    # ... on PullRequest {
-                    #     author{
-                    #         login,
-                    #         avatarUrl(size:1000),
-                    #         url
-                    #     },
-                    #     body,
-                    #     closed,
-                    #     closedAt,
-                    #     deletions,
-                    #     editor {
-                    #         login,
-                    #         avatarUrl(size:1000),
-                    #         url
-                    #     },
-                        
-                    }
+# # /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                        # collaborators(first:2) {
+                        #     totalCount,
+                        #     # edges {
+                        #     #     node {
+                        #     #         login,name,avatarUrl(size:1080)
+                        #     #     }
+                        #     # }
+                        # },
+                        mentionableUsers(first:2){
+                            totalCount,
+                            edges{node{
+                                login,name
+                            }}
+                        },
+                        assignableUsers(first:2){
+                            totalCount,
+                            edges{node{
+                                login,name
+                            }}
+                        },
+                        commitComments(first:5) {
+                            totalCount,
+                            edges {
+                                node {
+                                    author {login},
+                                    body,createdAt,path,
+                                    editor {login},
+                                }
+                            }
+                        },
+                        forks(first:2) {
+                            totalCount,totalDiskUsage,
+                            edges {
+                                node {
+                                    nameWithOwner,description,forkCount,createdAt,homepageUrl,
+                                    stargazerCount,licenseInfo{nickname}
+                                }
+                            }
+                        },
+                        issues(first:2) {
+                            totalCount,
+                            edges{
+                                node{
+                                title,url,number,state
+                                }
+                            }
+                        }, #orderBy: LabelOrder = {field: CREATED_AT, direction: ASC}
+                        labels(first:3) {
+                            totalCount,
+                            edges{
+                                node{
+                                    name,createdAt,description,updatedAt,resourcePath,
+                                }   
+                            }
+                        },
+                        languages(first:10) {
+                            totalCount,totalSize,
+                            edges{
+                                node{
+                                    name,color
+                                }
+                            }
+                        },
+                        pullRequests(first:2) {
+                            totalCount,
+                            edges {
+                                node{
+                                    title,number,permalink,additions,
+                                    body,state,createdAt,deletions,
+                                    publishedAt,author{login},headRepository{name},
+                                    headRepositoryOwner{login}
+                                }
+                            }
+                        },
+                        packages(first:2){
+                            totalCount,
+                            edges{
+                                node{
+                                    name,packageType,statistics{downloadsTotalCount}
+                                }
+                            }
+                        },
+                        watchers(first:2){
+                            totalCount,
+                            edges{
+                                node{
+                                    login,url,location
+                                }
+                            }
+                        },
                 }
             }
         }
+        }
+    }
     
 `;
 

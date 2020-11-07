@@ -65,7 +65,7 @@ const RepositoryList = ({searchTerm}) => {
     )
   }
 // tslint:disable-next-line:no-console
-//console.log(data.rateLimit)
+console.log(data.rateLimit)
 // tslint:disable-next-line:no-console
  console.log(data.search);
   return (

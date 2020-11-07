@@ -658,3 +658,96 @@ header .pizza-svg {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
+
+.repo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; }
+
+.pull {
+  flex: 1 1 100%;
+  padding: 2%;
+  background-color: pink;
+  height: auto;
+  width: 500px;
+  margin: 2%; }
+
+.item {
+  background-color: red;
+  flex: 42%;
+  height: auto;
+  margin: 2%; }
+
+.go-corner {
+  display: flex;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background: radial-gradient(circle, #7E57C2 0%, #7E57C2 100%);
+  border-radius: 0 4px 0 32px; }
+
+.go-arrow {
+  transform: scale(1.5);
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans; }
+
+.card {
+  display: block;
+  position: relative;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden; }
+  .card:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: radial-gradient(circle, #7E57C2 0%, #7E57C2 100%);
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.75s ease-out; }
+  .card:hover:before {
+    transform: scale(121); }
+
+.card:hover .pull_contents {
+  color: white; }
+
+.card:hover p {
+  transition: all 0.3s ease-out;
+  color: rgba(255, 255, 255, 0.8); }
+
+.card:hover h3 {
+  transition: all 0.3s ease-out;
+  color: #ffffff; }
+
+.pull_contents {
+  color: black;
+  font-size: 1.5rem; }
+
+@media (max-width: 768px) {
+  .pull {
+    flex: 1 1 100%;
+    background-color: pink;
+    height: 100px;
+    width: 500px;
+    margin: 2%; }
+  .item {
+    background-color: red;
+    flex: 1 1 100%;
+    height: 100px;
+    margin: 2%; } }
