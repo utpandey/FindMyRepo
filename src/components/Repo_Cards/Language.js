@@ -15,10 +15,10 @@ const Language = ({data,i}) => {
 
     return (
     <div> 
-        <List as='ol'>
+        <List as='li'>
             {/* <List.Item as='li' className="pull_contents">Author : {login}</List.Item> */}
-            <List.Item as='li' className="pull_contents">Name : {name}</List.Item>
-            <List.Item as='li' className="pull_contents">Color : {color}</List.Item>
+            <List.Item as='li' className="pull_contents" style={{color: `${color}`}}>{name}</List.Item>
+            {/* <List.Item as='li' className="pull_contents">Color : {color}</List.Item> */}
             {/* <List.Item as='li' className="pull_contents">Issue-Number : {issueNumber}</List.Item>
             <List.Item as='li' className="pull_contents">Issue-State : {state}</List.Item> */}
         </List>

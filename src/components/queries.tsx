@@ -106,7 +106,7 @@ export const SEARCH_FOR_REPOS = gql `
             remaining
             resetAt
         }
-        search(query: $search_term, type: REPOSITORY, first: 2) {
+        search(query: $search_term, type: REPOSITORY, first: 10) {
             repositoryCount,
             
             edges {

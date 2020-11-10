@@ -1,11 +1,13 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
 @import "../base/base";
 @import "../pages/_home.scss";
 @import "../pages/_users.scss";
 @import '../components/_searchBar.scss';
 @import '../components/_header.scss';
 @import "../components/_userCard.scss";
+@import "../components/_userCard1.scss";
 @import "../components/_about.scss";
 @import "../components/_profile.scss";
 @import "../components/_repolist.scss";
 @import "../components/_repo.scss";
-

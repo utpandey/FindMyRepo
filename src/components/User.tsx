@@ -46,135 +46,105 @@ if (error) {
   //     </div>
   //   )
   // }
-  console.log(data.user.issues);
+    console.log(data.user.issues);
   // console.log(typeof(data.user.issues));
-  console.log(Object.values(data.user.issues)[1]);
+    console.log(Object.values(data.user.issues)[1]);
   // console.log(data.user.issues(totalCount));
 
-const buttonClasses = classnames({"cont_modal": true},{"cont_modal_active": isActive})
-
-console.log(data.user.repositories)
-console.log(data.user);
-  return (
-    
-    
-       <div className="cont_principal" >
-        <div className="cont_central" >
-            <div className={buttonClasses}> 
-                <div className="cont_photo" >
-                    <div className="cont_img_back">
-                        <img src={data.user.avatarUrl} alt="" />
-                        {/* <h3>{data.user.login}</h3> */}
-                    </div>
-                    {/* <div className="cont_mins">
-                        <div className="sub_mins">
-                            <h3>50</h3>
-                            <span>MINS</span>
-                        </div>
-                        <div className="cont_icon_right">
-                            <a href="#"> <i className="material-icons">&#xE8E7;</i></a>
-                        </div>
-                    </div>
-                    <div className="cont_servings">
-                        <h3>4</h3>
-                        <span>SERVINGS</span>
-                    </div> */}
-                    <div className="cont_detalles">
-                        <h3>{data.user.login}</h3>
-                        {data.user.bio ? <p>{data.user.bio}</p>:<p>No Bio provided</p>}
-                    </div>
-                </div>
-                <div className="cont_text_ingredients">
-                    <div className="cont_over_hidden">
-                        <div className="cont_tabs">
-                            <ul>
-                                <li>
-                                    <a href="#" onClick={() => setTabActive("Profile")}>
-                                        <h4>Profile</h4>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" onClick={() => setTabActive("About")}>
-                                        <h4>About</h4>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                            {/* <div className="extender_cont">
-
-                            </div> */}
-                        <div className="cont_text_det_preparation">
-                            {tabActive === "About" && <About 
-                                bio={data.user.bio}
-                                company={data.user.company}
-                                createdAt={data.user.createAt}
-                                email={data.user.email}
-                                name={data.user.name}
-                                followers={Object.values(data.user.followers)[1]}
-                                following={Object.values(data.user.following)[1]}
-                                issues={Object.values(data.user.issues)[1]}
-                                weburl={data.user.websiteUrl}
-                                location={data.user.location}
-                            />}
-                            {tabActive === "Profile" && <Profile 
-                                repositoriesContributedTo={Object.values(data.user.repositoriesContributedTo)[1]}
-                                commitComments={Object.values(data.user.commitComments)[1]} 
-                                issueComments={Object.values(data.user.issueComments)[1]} 
-                                pinnedItems={Object.values(data.user.pinnedItems)[1]} 
-                                pullRequests={Object.values(data.user.pullRequests)[1]} 
-                                repositories={Object.values(data.user.repositories)[1]}  
-                                starredRepositories={Object.values(data.user.starredRepositories)[1]} 
-                                watching={Object.values(data.user.watching)[1]} 
-                            />}
-                            {/* <div className="cont_title_preparation">
-                                <p>STEP 1</p>
-                            </div>
-                            <div className="cont_info_preparation">
-                                <p>Heat oven to 375 degress</p>
-                            </div>
-                            <div className="cont_text_det_preparation">
-                                <div className="cont_title_preparation">
-                                    <p>STEP 2</p>
-                                </div>
-                                <div className="cont_info_preparation">
-                                    <p>Heat oil in a large skillet over medium-low head. Add onion and bell papper. Cook gently until very soft, about 20 minutes. Add garlic and cook until tender, 1 to 2 minutes; stir in cumin, paprika and cook 1 minute.
-                                        Pour in tomatoes and season with 3/4 teaspoon salt and 1/4 teaspoon pepper;</p>
-                                </div>
-                            </div> */}
-                        </div>
-                        <div className="cont_text_det_">
-                            
-                            {/* <div className="cont_title_preparation">
-                                <p>STEP 1</p>
-                            </div>
-                            <div className="cont_info_preparation">
-                                <p>Heat oven to 375 degress</p>
-                            </div>
-                            <div className="cont_text_det_preparation">
-
-                                <div className="cont_title_preparation">
-                                    <p>STEP 2</p>
-                                </div>
-                                <div className="cont_info_preparation">
-                                    <p>Heat oil in a large skillet over medium-low head. Add onion and bell papper. Cook gently until very soft, about 20 minutes. Add garlic and cook until tender, 1 to 2 minutes; stir in cumin, paprika and cook 1 minute.
-                                        Pour in tomatoes and season with 3/4 teaspoon salt and 1/4 teaspoon pepper;</p>
-                                </div>
-                            </div> */}
-                        </div>
-                        {/* <div className="cont_btn_mas_dets">
-                            <a href="#"><i className="material-icons">&#xE313;</i></a>
-                        </div> */}
-                    </div>
-                    <div className="cont_btn_open_dets">
-                        <a href="#e" onClick={() => setActive(!isActive)}><i className="material-icons">&#xE314;</i></a>
-                    </div>
-                </div>
+// const buttonClasses = classnames({"cont_modal": true},{"cont_modal_active": isActive})
+    const cardClass = classnames({ "user_card": true }, { "active": isActive });
+    console.log(data.user.repositories)
+    console.log(data.user);
+    return (
+        // <div className={cardClass}>
+        //     <div className="content">
+        //         Contents
+        //     </div>
+        //     <div className="fabs">
+        //         <div className="fab"/>
+        //         <i className="avatar zmdi zmdi-account" onClick={avatarHandler}/>
+        //     </div>
+    <div className={cardClass}>
+        <div className="content">
+            <div className="post main">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+                <div className="detail"/>
+                <div className="details"/>
+                <div className="details"/>
+            </div>
+            <div className="post sec">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+            </div>
+            <div className="post sec">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+            </div>
+            <div className="post ter">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+            </div>
+            <div className="post ter">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+            </div>
+            <div className="post ter">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+            </div>
+            <div className="post ter">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+            </div>
+            <div className="post ter">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
+            </div>
+            <div className="post ter">
+                <div className="preview"/>
+                <div className="counter"/>
+                <div className="detail"/>
             </div>
         </div>
-      </div>
-    
-   
-  );
+        <div className="fabs">
+            <div className="fab"/>
+                <div className="avatar " onClick={() => setActive(!isActive)}>
+                    <img src={data.user.avatarUrl} alt="" />
+            </div>
+        </div>
+        <div className="user">
+                <div className="heading">
+                    {/* <div>({data.user.name} ? {data.user.name} : {data.user.login})</div> */}
+                    {(data.user.name) ?
+                        <div className="heading_title">{data.user.name}</div> :
+                        <div className="heading_title">{data.user.login}</div>}
+                    <div className="heading_icons"><i className="zmdi zmdi-github" onClick={() => window.open(data.user.url)}/></div>
+                {/* <div className="social"><i className="zmdi zmdi-twitter"/></div>
+                <div className="social"><i className="zmdi zmdi-github"/></div>
+                <div className="social"><i className="zmdi zmdi-google-plus"/></div>
+                <div className="social"><i className="zmdi zmdi-codepen"/></div> */}
+            </div>
+            <div className="profiles">
+                    <div className="profile"><span>{data.user.followers.totalCount}</span>Followers</div>
+                <div className="profile"><span>{data.user.followers.totalCount}</span>Following</div>
+                <div className="profile"><span>{data.user.repositories.totalCount}</span>Repositories</div>
+                <div className="profile"><span>{data.user.starredRepositories.totalCount}</span>Stars</div>
+                <div className="profile"><span>{data.user.watching.totalCount}</span>Watching</div>
+                <div className="profile"><span>{data.user.pullRequests.totalCount}</span>Pull Requests</div>
+            </div>
+        </div>
+    </div>
+
+        );
 };
 
 

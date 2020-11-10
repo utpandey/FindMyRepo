@@ -8,6 +8,7 @@ import RepoCard from './RepoCard';
 
 const useStyles = makeStyles({
   note: {
+    fontSize: '1.5rem',
     marginTop: '1rem',
     textAlign: 'center',
   },
@@ -67,7 +68,7 @@ const RepositoryList = ({searchTerm}) => {
 // tslint:disable-next-line:no-console
 console.log(data.rateLimit)
 // tslint:disable-next-line:no-console
- console.log(data.search);
+console.log(data.search);
   return (
     
     <div className="repolist">

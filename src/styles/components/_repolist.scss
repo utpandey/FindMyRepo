@@ -1,6 +1,7 @@
 .repolist {
     height: 100%;
-    width: 90%;
+    padding: 5rem;
+    //width: 90%;
     margin-top: 10rem;
     //background-color: wheat;
     display: flex;
@@ -9,6 +10,13 @@
     //padding: 10px;
     overflow-x: hidden;
     // align-items: center;
+    @include respond(phone) {
+        padding: 0rem;
+        flex-direction: column;
+        align-content: center;
+        //justify-content: space-around;
+        
+    }
 }
 
 .go-corner {
@@ -17,7 +25,7 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 52px;
+    width: 4rem;
     height: 32px;
     overflow: hidden;
     top: 0;
@@ -27,6 +35,7 @@
 }
 
 .go-arrow {
+    transform: scale(2);
     margin-top: -4px;
     margin-right: -4px;
     color: white;
@@ -44,7 +53,7 @@
     transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
     padding: 32px 24px;
     top: 0px;
-    margin: 12px;
+    //margin: 12px;
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
@@ -52,7 +61,7 @@
     // padding-bottom: 32%;
     //padding: 10px;
     /* Same as width, sets height */
-    margin-bottom: 2%;
+    margin-bottom: 4rem;
     /* (100-32*3)/2 */
     // &:hover {
     //     border: 1px solid #00838d;
@@ -68,19 +77,25 @@
     .go-corner {
         background-color: #00838d;
         height: 100%;
-        width: 16px;
-        padding-right: 9px;
+        width: 2.5rem;
+        padding-right: 1rem;
         border-radius: 0;
         transform: skew(6deg);
-        margin-right: -36px;
+        margin-right: -5rem;
         align-items: start;
         background-image: linear-gradient(-45deg, #8F479A 1%, #DC2A74 100%);
     }
     .go-arrow {
-        transform: skew(-6deg);
-        margin-left: -2px;
+        transform: skew(-6deg) scale(2);
+        margin-left: 1rem;
         margin-top: 1rem;
         opacity: 0;
+    }
+
+    @include respond(phone) {
+        width: 50%;
+        padding: 2rem;
+        margin: 2rem;
     }
 }
 
@@ -101,7 +116,7 @@
 
 .repoList_cards:hover {
     .go-corner {
-        margin-right: -12px;
+        margin-right: -1.5rem;
     }
     .go-arrow {
         opacity: 1;
@@ -116,18 +131,27 @@
 
 .repoList_cards:hover {
     p {
-        color: #00838d
+        //background-color: linear-gradient(#8F479A, #DC2A74);
+        color: #DC2A74;
+        ;
+    }
+    .nameImage>h3 {
+        color: #DC2A74;
     }
 }
 
 .nameImage>h3 {
     color: black;
     font-size: 4rem;
+     @include respond(tab-land) {
+        font-size: 2.5rem;
+        
+    }
 }
 
 .repoList_cards>p {
-    font-size: 1.3rem;
-    line-height: 1.5rem;
+    font-size: 1.7rem;
+    line-height: 2.5rem;
     width: 60%;
     color: rgb(49, 49, 49);
 }
@@ -142,8 +166,14 @@
 }
 
 .nameImage {
-    margin: 2.5rem;
+    //background-color: burlywood;
+    margin: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    @include respond(tab-land) {
+        margin: 1rem;
+        //justify-content: space-between;
+        
+    }
 }

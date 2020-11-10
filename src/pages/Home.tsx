@@ -44,6 +44,7 @@ const Home = () => {
       <div>
         <Link to='/users'>
           <motion.h3
+            className="home_title"
             whileHover={{color: 'black',scale: '0.9'}}
           >
           User
@@ -51,6 +52,7 @@ const Home = () => {
         </Link>
         <Link to='/repolist'>
           <motion.h3
+            className="home_title"
             whileHover={{color: 'black',scale: '0.9'}}
           >
               Repository

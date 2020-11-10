@@ -29,11 +29,11 @@ const Repository = (props) => {
     <div className="repo">
     {/*                         PULL-REQUESTS COMPONENT                                  */}
       <div className="pull card">
-        Total Pull Requests : {pullRequests.totalCount}
-        {pullRequests &&
+        <div className="card_title">Total Pull Requests : {pullRequests.totalCount}</div>
+        {pullRequests ?
           pullRequests.edges.map((data,i) => (
             <Pull data={data} key={i}/>
-          ))
+          )) : "No Pull Requests"
         }
         <div className="go-corner" href="#">
           <div className="go-arrow">
@@ -43,11 +43,11 @@ const Repository = (props) => {
       </div>
       {/*                         COMMIT-COMMENTS COMPONENT                                  */}
       <div className="item commit card">
-        Total Commit Comments : {commitComments.totalCount}
-        {commitComments &&
+        <div className="card_title">Total Commit Comments : {commitComments.totalCount}</div>
+        {commitComments ?
           commitComments.edges.map((data,i) => (
                 <Commit data={data} key={i}/>
-              ))
+              )) : "No Commit Comments"
             }
         <div className="go-corner" href="#">
           <div className="go-arrow">
@@ -56,12 +56,14 @@ const Repository = (props) => {
         </div>
       </div>
       <div className="item forks card">
-        Total Fork Count : {forks.totalCount} <br></br>
-        Total Fork Disk Usage : {bytesToSize(forks.totalDiskUsage)}
-        {forks &&
+        <div className="card_title">Total Fork Count : {forks.totalCount} <br></br>
+          Total Fork Disk Usage : {bytesToSize(forks.totalDiskUsage)}
+        </div>
+        
+        {forks ?
           forks.edges.map((data,i) => (
                 <Fork data={data} key={i}/>
-              ))
+              )) : "No Forks"
             }
         <div className="go-corner" href="#">
           <div className="go-arrow">
@@ -70,11 +72,11 @@ const Repository = (props) => {
         </div>
       </div>
       <div className="item issues card">
-        Total Issues Count : {issues.totalCount} 
-        {issues &&
+        <div className="card_title">Total Issues Count : {issues.totalCount} </div>
+        {issues ?
           issues.edges.map((data,i) => (
                 <Issues data={data} key={i}/>
-              ))
+              )) : "No Issues"
             }
         <div className="go-corner" href="#">
           <div className="go-arrow">
@@ -83,7 +85,7 @@ const Repository = (props) => {
         </div>
       </div>
       <div className="item labels card">
-        Total Labels Count : {labels.totalCount}
+        <div className="card_title">Total Labels Count : {labels.totalCount}</div>
         {labels &&
               labels.edges.map((data,i) => (
                 <Labels data={data} key={i}/>
@@ -96,8 +98,10 @@ const Repository = (props) => {
         </div>
       </div>
       <div className="item languages card">
-        Total Language Count : {languages.totalCount} <br></br>
-        Total Size of Languages used : {languages.totalSize}
+        <div className="card_title">Total Language Count : {languages.totalCount} <br></br>
+          Total Size of Languages used : {languages.totalSize}
+        </div>
+      
         {languages &&
           languages.edges.map((data,i) => (
                 <Language data={data} key={i}/>
@@ -110,7 +114,7 @@ const Repository = (props) => {
         </div>
       </div>
       <div className="item watchers card">
-        Total Watchers Count : {watchers.totalCount}
+        <div className="card_title">Total Watchers Count : {watchers.totalCount}</div>
         {watchers &&
           watchers.edges.map((data,i) => (
                 <Watchers data={data} key={i}/>

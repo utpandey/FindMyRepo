@@ -1,9 +1,10 @@
 .cont_principal {
     position: relative;
-    // background: black;
+    //background-color: black;
     width: 100%;
     height: 100%;
     clear: both;
+    //overflow: hidden;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fbfaf6+9,d4cebf+74,d4cebf+74,d4cebf+100 */
     // background: rgb(251, 250, 246);
     // /* Old browsers */
@@ -19,19 +20,19 @@
 }
 
 .cont_central {
-    position: absolute;
+    //position: absolute;
     width: 100%;
-    // top: 50%;
-    left: 30%;
-    top: 100px;
-    height: 100%;
-    // background-color:black;
+    //top: 5rem;
+    left: 0%;
+    top: 10rem;
+    height: auto;
+    //background-color:black;
     // margin-top: -200px;
 }
 
 .cont_modal {
     position: relative;
-    width: 300px;
+    width: 30rem;
     height: auto;
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
@@ -44,12 +45,13 @@
 
 .cont_photo {
     position: relative;
-    width: 350px;
-    height: 300px;
+    width: 40rem;
+    height: 40rem;
     overflow: hidden;
     background-color: #eee;
     border-radius: 5px;
-    // top: -20px;
+    top: 10rem;
+    left: 25rem;
     float: left;
     z-index: 2;
     -webkit-transition: all 0.5s;
@@ -87,7 +89,7 @@
     width: 0px;
     top: 0px;
     left: 340px;
-    margin-left: 10px;
+    margin-left: 20rem;
     height: 300px;
     float: left;
     border-radius: 5px;
@@ -216,15 +218,15 @@
 
 .cont_btn_open_dets {
     position: absolute;
-    right: -20px;
-    top: 50%;
+    left: 25rem;
+    top: 30rem;
 }
 
 .cont_btn_open_dets>a {
     display: block;
-    padding-top: -5px;
-    width: 30px;
-    height: 30px;
+    padding-top: -1rem;
+    width: 3rem;
+    height: 3rem;
     background-color: #ED2460;
     border-radius: 50%;
     color: #fff;
@@ -237,7 +239,7 @@
 }
 
 .cont_btn_open_dets>a>i {
-    margin-top: 4px;
+    margin-top: 1rem;
 }
 
 .cont_title_preparation {
