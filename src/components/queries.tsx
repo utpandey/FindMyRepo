@@ -35,13 +35,18 @@ export const SEARCH_FOR_USERS = gql `
                 totalCount
             }
             pinnedItems(first:2){
-                totalCount
+                totalCount,
             }
             projects(first:5){
                 totalCount
             }
             pullRequests(first:2){
-                totalCount
+                totalCount,
+                edges{
+                    node{
+                        body,title,state,number
+                    }
+                }
             }
             repositories(first:2){
                 totalCount

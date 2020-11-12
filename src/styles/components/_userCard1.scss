@@ -1,7 +1,7 @@
 @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
 .user_card {
     height: 50rem;
-    width: 40rem;
+    width: 45rem;
     background: #fff;
     font-family: Roboto;
     display: block;
@@ -64,7 +64,7 @@
 .active .avatar {
     transform: scale(1.5);
     margin-top: 5rem;
-    margin-left: 15rem;
+    margin-left: 17rem;
     transition: 0.6s ease-in-out;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     &>img {
@@ -81,7 +81,7 @@
 .fabs {
     position: absolute;
     margin-top: -30px;
-    margin-left: 35rem;
+    margin-left: 40rem;
     overflow: hidden;
     width: 10rem;
     height: 10rem;
@@ -95,19 +95,80 @@
     margin-top: 0px;
     margin-left: 0px;
     height: 50rem;
-    width: 40rem;
+    width: 45rem;
     transition: 0.4s ease-in-out;
-    border-radius: 0;
+    border-radius: 1rem;
 }
 
 .content {
+    border-radius: 1rem;
+    //background-color: cyan;
     position: absolute;
-    width: 280px;
-    height: 380px;
-    margin: 10px;
-    text-align: center;
+    height: 50rem;
+    // width: 45rem;
+    width: 100%;
+    //text-align: center;
     overflow-y: auto;
     transition: 0.5s 0.3s cubic-bezier(.55, 0, .1, 1);
+    display: flex;
+    flex-direction: row;
+    //justify-content: flex-end;
+    &_tabs {
+        flex: 0.5;
+        // position: absolute;
+        // left: -15rem;
+        // top: 20rem;
+        // //top: 10rem;
+        // transform: rotate(-90deg);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        //margin-bottom: 5rem;
+        //background-color: darkblue;
+        .tabitem {
+            //border: 1px solid #fff;
+            cursor: pointer;
+            //margin: 1rem;
+            //padding: 1rem;
+            //width: 24%;
+            height: 25%;
+            //height: 100%;
+            text-align: center;
+            //padding: 1rem;
+            background-color: #7E57C2;
+            display: flex;
+            flex-direction: column;
+            //justify-content: center;
+        }
+        .tabitem--inactive {
+            opacity: 0.3;
+            filter: grayscale(100%);
+        }
+        .tabitem__icon {
+            color: rgba(255, 255, 255, 0.9);
+            //margin-top: 1rem;
+            transform: scale(0.2);
+            font-size: 1rem;
+        }
+        .tabitem__title {
+            //display: none;
+            overflow-wrap: break-word;
+            //color: rgba(255, 255, 255, 0.9);
+            //display: block;
+            //top: -20rem;
+            // color: dimgrey;
+            margin-top: -3rem;
+            font-size: 1rem;
+            //margin: 1rem 0;
+        }
+    }
+    &_body {
+        flex: 3;
+        //width: 35rem;
+        text-align: center;
+        font-size: 22px;
+        color: fuchsia;
+    }
 }
 
 .active .content {
@@ -118,7 +179,7 @@
 
 .user {
     position: absolute;
-    width: 35rem;
+    width: 40rem;
     height: 20rem;
     margin: 20rem 1rem 0 3rem;
     text-align: center;
@@ -133,23 +194,26 @@
 .heading {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
+    align-content: center;
     // align-items: center;
     // align-content: center;
     //background-color: chartreuse;
+    margin-left: -1rem;
     &_title {
         font-size: 2rem;
+        align-content: center;
     }
     &_icons {
         line-height: 40px;
-        font-size: 2em;
+        font-size: 2rem;
         color: #37474f;
         cursor: pointer;
         transition: 0.2s cubic-bezier(.55, 0, .1, 1);
         opacity: 0;
         //transform: translate(0px, -10px);
         &>i {
-            margin: 2rem;
+            margin: 2rem 0rem;
             font-size: 3rem;
             color: #37474f;
             &:hover {

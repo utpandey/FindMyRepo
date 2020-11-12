@@ -13,6 +13,9 @@
         "no-shadowed-variable": true,
         "jsx-no-lambda": false,
         "no-console": false
+    },
+    "jsRules": {
+        "no-console": false
     }
 
 }
