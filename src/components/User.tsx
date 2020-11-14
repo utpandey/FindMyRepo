@@ -5,6 +5,26 @@ import {useDebounce} from "use-debounce";
 import {SEARCH_FOR_REPOS,SEARCH_FOR_USERS} from "./queries";
 import { IUser } from '../interfaces/interfaces';
 import { Pull, Pin ,Comment,Repo} from './User_Cards/index';
+import { motion } from 'framer-motion';
+
+
+const UserContainerVariants = {
+    hidden: {
+        opacity:0
+    },
+    visible: {
+        opacity: 1,
+        transition: {
+        delay: 0.5, duration: 2
+    }
+    },
+    exit: {
+        x: '-100vw',
+        transition: {
+        ease: 'easeInOut'
+        }
+    }
+}
 
 const tabItems = [
     {
@@ -88,25 +108,18 @@ if (!data.user) {
     </div>
     )
 }
-    // console.log(data.user.issues);
-  // console.log(typeof(data.user.issues));
-    // console.log(Object.values(data.user.issues)[1]);
-  // console.log(data.user.issues(totalCount));
 
 // const buttonClasses = classnames({"cont_modal": true},{"cont_modal_active": isOpen})
     const cardClass = classnames({ "user_card": true }, { "active": isOpen });
     // console.log(data.user.repositories)
     console.log(data.user);
     return (
-        // <div className={cardClass}>
-        //     <div className="content">
-        //         Contents
-        //     </div>
-        //     <div className="fabs">
-        //         <div className="fab"/>
-        //         <i className="avatar zmdi zmdi-account" onClick={avatarHandler}/>
-        //     </div>
-    <div className={cardClass}>
+        <motion.div className={cardClass}
+        variants={UserContainerVariants}
+        initial='hidden'
+        animate='visible'
+        exit='exit'
+        >
         <div className="content">
             <div className="content_tabs">
                 {tabItems.map(({ id, icon, title }) =><TabItemComponent
@@ -141,10 +154,6 @@ if (!data.user) {
                         <div className="heading_title">{data.user.name}</div> :
                         <div className="heading_title">{data.user.login}</div>}
                     <div className="heading_icons"><i className="zmdi zmdi-github" onClick={() => window.open(data.user.url)}/></div>
-                {/* <div className="social"><i className="zmdi zmdi-twitter"/></div>
-                <div className="social"><i className="zmdi zmdi-github"/></div>
-                <div className="social"><i className="zmdi zmdi-google-plus"/></div>
-                <div className="social"><i className="zmdi zmdi-codepen"/></div> */}
             </div>
             <div className="profiles">
                     <div className="profile"><span>{data.user.followers.totalCount}</span>Followers</div>
@@ -155,8 +164,7 @@ if (!data.user) {
                 <div className="profile"><span>{data.user.pullRequests.totalCount}</span>Pull Requests</div>
             </div>
         </div>
-    </div>
-
+    </motion.div>
     );
 };
 

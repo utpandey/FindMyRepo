@@ -1,7 +1,8 @@
 import React,{useEffect,useState} from 'react';
 import { List } from 'semantic-ui-react'
+import { IPull } from '../../interfaces/RepoCards/index';
 
-const Watchers = ({data,i}) => {
+const Watchers: React.FC<IPull>  = ({data}) => {
     // tslint:disable-next-line:no-console
     console.log(data.node);
     // tslint:disable-next-line:no-console

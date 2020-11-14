@@ -199,10 +199,10 @@ li span.active::before {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2); }
 
 .field.active input {
-  padding: 20px 16px 8px 16px; }
+  padding: 0.9rem 2rem 0rem 1rem; }
 
 .field.active input + label {
-  top: 4px;
+  top: 0.2rem;
   opacity: 1;
   color: #512da8; }
 
@@ -211,13 +211,13 @@ li span.active::before {
 
 .field input {
   width: 100%;
-  height: 40px;
+  height: 4rem;
   position: relative;
-  padding: 3px 16px;
+  padding: 0rem 0rem 1rem 1rem;
   border: none;
   border-radius: 4px;
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: normal;
   background-color: transparent;
@@ -241,8 +241,8 @@ li span.active::before {
 
 .field input + label {
   position: absolute;
-  top: 24px;
-  left: 16px;
+  top: 2rem;
+  left: 1rem;
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
@@ -545,6 +545,44 @@ header .pizza-svg {
   margin: 2px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2); }
+
+.repoError {
+  text-align: center;
+  padding: 10rem; }
+
+.loader {
+  display: flex;
+  padding: 10rem 0rem 0rem 50rem;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
+  height: 100px;
+  background-color: transparent; }
+
+.loader div {
+  width: 20px;
+  height: 20px;
+  background: #b3b5b8;
+  border-radius: 50%;
+  animation: loader 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate; }
+
+.loader div:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8; }
+
+.loader div:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6; }
+
+.loader div:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.4; }
+
+@keyframes loader {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-100px); } }
 
 .repolist {
   height: 100%;

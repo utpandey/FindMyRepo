@@ -1,15 +1,8 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import { List } from 'semantic-ui-react'
+import { IPull } from '../../interfaces/RepoCards/index';
 
-const Pull = ({data,i}) => {
-    const [index,setIndex] = useState(0);
-    useEffect(() => {
-        setIndex(index+1);
-      // const {data: {repo:node}} = {location};
-      // tslint:disable-next-line:no-console
-      // console.log(node);
-    },[data])
-
+const Pull: React.FC<IPull> = ({data}) => {
     // tslint:disable-next-line:no-console
     // console.log("total" + RepototalCount);
     const {node:{additions,body,permalink,publishedAt,state,title}} = data;

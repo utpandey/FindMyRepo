@@ -1,21 +1,8 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import { List } from 'semantic-ui-react'
-// edges {
-//   node {
-//       author {login},
-//       body,createdAt,path,
-//       editor {login},
-//   }
-// }
-const Forks = ({data,i}) => {
-    const [index,setIndex] = useState(0);
-    useEffect(() => {
-        setIndex(index+1);
-      // const {data: {repo:node}} = {location};
-      // tslint:disable-next-line:no-console
-      // console.log(node);
-    },[data])
+import { IPull } from '../../interfaces/RepoCards/index';
 
+const Forks: React.FC<IPull> = ({data}) => {
     // tslint:disable-next-line:no-console
     console.log(data);
     const {node:{createdAt,description,forkCount,

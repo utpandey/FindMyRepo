@@ -55,7 +55,7 @@ export interface IAbout {
   weburl: any
 }
 
- export interface IProfile {
+export interface IProfile {
   commitComments: any,
   issueComments: any,
   pinnedItems: any,
@@ -64,4 +64,35 @@ export interface IAbout {
   repositoriesContributedTo: any,
   starredRepositories: any,
   watching: any,
- }
+}
+
+export interface IRepoObject {
+  repo: any,
+  i : any
+}
+
+export interface IRepository {
+  // repo: {
+  //   node:
+  //   {
+  //     name: string, description: string, openGraphImageUrl: string,
+  //     owner: { login: string }, stargazers: { totalCount: { totalStarCount: number } }
+  //   }
+  // }
+  repo : any
+}
+
+export interface IStateType {
+  from: { pathname: string },
+  repo: any
+}
+
+export interface IRepoCard {
+  node : any,
+  name: any,
+  description : any,
+  openGraphImageUrl : any,
+  owner : any,
+  stargazers : any,
+}
+

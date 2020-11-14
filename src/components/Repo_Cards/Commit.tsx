@@ -1,13 +1,8 @@
 import React,{useEffect,useState} from 'react';
 import { List } from 'semantic-ui-react'
-// edges {
-//   node {
-//       author {login},
-//       body,createdAt,path,
-//       editor {login},
-//   }
-// }
-const Commit = ({data,i}) => {
+import { IPull } from '../../interfaces/RepoCards/index';
+
+const Commit: React.FC<IPull> = ({data}) => {
     const [index,setIndex] = useState(0);
     useEffect(() => {
         setIndex(index+1);

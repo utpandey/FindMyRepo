@@ -1,24 +1,16 @@
 import React from 'react';
-const { useState, useEffect } = React;
-import { List } from 'semantic-ui-react'
 import github__repo from '../../icons/github__repo.svg';
 import moment from 'moment';
-
-const converter = (date) => {
-    const m = moment(date);
-    return m.format('LLL');
-}
-
-const CommitItem = ({value,i}) => {
+import { IRepoItem } from '../../interfaces/UserCardTypes/types';
+// const converter = (date:string) => {
+//     const m = moment(date);
+//     return m.format('LLL');
+// }
+const RepoItem: React.FC<IRepoItem>  = ({value}) => {
     const {node: {
-         id,nameWithOwner,url,
+        id,nameWithOwner,url,
                         updatedAt,openGraphImageUrl,stargazerCount
     }} = value;
-    // console.log(value.node)
-    // console.log(moment.utc(updatedAt).toDate());
-    // console.log(moment.utc(updatedAt).local().format('YYYY-MM-DD HH:mm:ss'));
-    // console.log(title)
-    // console.log(state)
     return (
       <React.Fragment>    
         <div className="Repo">
@@ -31,4 +23,4 @@ const CommitItem = ({value,i}) => {
     )
 }
 
-export default CommitItem;
+export default RepoItem;

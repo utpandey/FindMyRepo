@@ -1,12 +1,8 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import { List } from 'semantic-ui-react'
-// totalCount,
-// edges{
-//     node{
-//     title,url,number,state
-//     }
-// }
-const Language = ({data,i}) => {
+import { IPull } from '../../interfaces/RepoCards/index';
+
+const Language: React.FC<IPull> = ({data}) => {
     // tslint:disable-next-line:no-console
     console.log(data.node);
     // tslint:disable-next-line:no-console

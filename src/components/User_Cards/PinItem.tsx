@@ -1,7 +1,7 @@
 import React from 'react';
-const { useState, useEffect } = React;
+import {IPinItem } from '../../interfaces/UserCardTypes/types';
 
-const PinItem = ({value,i}) => {
+const PinItem: React.FC<IPinItem> = ({value}) => {
     // value = {node : {
     //     licenseInfo : {
     //         nickname: 'No license'

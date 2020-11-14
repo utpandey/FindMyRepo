@@ -1,9 +1,8 @@
 import React from 'react';
-const { useState, useEffect } = React;
-import { List } from 'semantic-ui-react'
+import { ICommitItem } from '../../interfaces/UserCardTypes/types';
 
-const CommitItem = ({value,i}) => {
-    const {node: {body,position,publishedAt,repository:{name},url,}} = value;
+const CommitItem: React.FC<ICommitItem> = ({value}) => {
+    const {node: {body,position,publishedAt,repository:{name},url}} = value;
     console.log(value.node)
     // console.log(title)
     // console.log(state)
@@ -15,7 +14,7 @@ const CommitItem = ({value,i}) => {
             <h1 className="Comment__text">position : {position ? position : "Not Available"} </h1>
             <h1 className="Comment__text">publishedAt : {publishedAt}</h1>
             <h1 className="Comment__text Comment__repo" onClick={() => window.open(url)}>repository : {name}</h1> 
-      </div>
+        </div>
         
     )
 }
