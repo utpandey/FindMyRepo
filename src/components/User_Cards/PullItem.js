@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+const { useState, useEffect } = React;
+import moment from 'moment';
 
-const PullItem = ({value}) => {
-    const {node: {body,title,state}} = value
+const PullItem = ({value,i}) => {
+    const {node: {title,state,closedAt,permalink,publishedAt}} = value;
+    console.log(value);
     return (
-        <div>
-            <h3 style={{color: 'black'}}>{title}</h3> 
-            <h3 style={{color: 'black'}}>{state}</h3>
-            <h3 style={{color: 'black'}}>{body}</h3>
-            
-        </div>
+        <div className="Pull">    
+            <h1 className="Pull__text title" onClick={() => window.open(permalink)}>Title : {title}</h1> 
+            <h1 className="Pull__text">State : {state}</h1>
+            <h1 className="Pull__text">Closed at : {moment.utc(closedAt).local().format('YYYY-MM-DD HH:mm:ss')}</h1>
+            <h1 className="Pull__text publish">Published at : {moment.utc(publishedAt).local().format('YYYY-MM-DD HH:mm:ss')}</h1> 
+      </div>
+        
     )
 }
 

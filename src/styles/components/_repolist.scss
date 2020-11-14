@@ -1,6 +1,8 @@
 .repolist {
     height: 100%;
-    padding: 5rem;
+    width: 100%;
+    //background-color: pink;
+    //padding-top: 5rem;
     //width: 90%;
     margin-top: 10rem;
     //background-color: wheat;
@@ -15,7 +17,6 @@
         flex-direction: column;
         align-content: center;
         //justify-content: space-around;
-        
     }
 }
 
@@ -91,7 +92,6 @@
         margin-top: 1rem;
         opacity: 0;
     }
-
     @include respond(phone) {
         width: 50%;
         padding: 2rem;
@@ -143,9 +143,8 @@
 .nameImage>h3 {
     color: black;
     font-size: 4rem;
-     @include respond(tab-land) {
+    @include respond(tab-land) {
         font-size: 2.5rem;
-        
     }
 }
 
@@ -174,6 +173,5 @@
     @include respond(tab-land) {
         margin: 1rem;
         //justify-content: space-between;
-        
     }
 }

@@ -1,12 +1,13 @@
 @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
 .user_card {
-    height: 50rem;
-    width: 45rem;
+    height: 60rem; //50
+    width: 100rem; //45
     background: #fff;
     font-family: Roboto;
     display: block;
-    position: relative;
-    margin: 10rem auto;
+    position: absolute;
+    margin-top: 12rem;
+    margin-bottom: 2rem;
     border-radius: 1rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all 0.2s ease-in-out;
@@ -20,7 +21,8 @@
     width: 7rem;
     height: 8rem;
     margin-top: 0;
-    //margin-left: 50px;
+    width: 100%;
+    margin-left: 50px;
     visibility: hidden;
     background-color: #ffd54f;
     border-radius: 1rem;
@@ -39,13 +41,12 @@
 }
 
 .avatar {
-    //margin-top: 5px;
     margin-left: 0rem;
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+    height: 15rem;
     //width: 100%;
     //height: 100%;
-    font-size: 2em;
+    font-size: 2rem;
     line-height: 60px;
     color: #37474f;
     border-radius: 50%;
@@ -62,9 +63,9 @@
 }
 
 .active .avatar {
-    transform: scale(1.5);
+    transform: scale(1.2);
     margin-top: 5rem;
-    margin-left: 17rem;
+    margin-left: 45rem;
     transition: 0.6s ease-in-out;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     &>img {
@@ -80,22 +81,22 @@
 
 .fabs {
     position: absolute;
-    margin-top: -30px;
-    margin-left: 40rem;
+    margin-top: -4rem;
+    margin-left: 90rem;
     overflow: hidden;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 1rem;
+    width: 15rem;
+    height: 15rem;
+    //border-radius: 1rem;
     transition: 1s ease-in-out;
-    border-radius: 50%;
+    //border-radius: 50%;
     justify-content: center;
 }
 
 .active .fabs {
     margin-top: 0px;
     margin-left: 0px;
-    height: 50rem;
-    width: 45rem;
+    height: 60rem; //50
+    width: 100%;
     transition: 0.4s ease-in-out;
     border-radius: 1rem;
 }
@@ -104,11 +105,11 @@
     border-radius: 1rem;
     //background-color: cyan;
     position: absolute;
-    height: 50rem;
+    height: 100%;
     // width: 45rem;
     width: 100%;
     //text-align: center;
-    overflow-y: auto;
+    overflow: hidden;
     transition: 0.5s 0.3s cubic-bezier(.55, 0, .1, 1);
     display: flex;
     flex-direction: row;
@@ -126,6 +127,11 @@
         //margin-bottom: 5rem;
         //background-color: darkblue;
         .tabitem {
+             --initialTextColor: #FFF;
+            --slideTextColor: #272838;
+
+            --initialBgColor: #7E57C2;
+            --slideBgColor: #FFF;
             //border: 1px solid #fff;
             cursor: pointer;
             //margin: 1rem;
@@ -138,15 +144,29 @@
             background-color: #7E57C2;
             display: flex;
             flex-direction: column;
-            //justify-content: center;
+            background-image: linear-gradient(90deg,
+            var(--initialBgColor) 0%,
+            var(--initialBgColor) 50%,
+            var(--slideBgColor) 50%,
+            var(--slideBgColor) 100%);
+            background-size: 200%;
+            transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+            color .2s linear;
+            transition-delay: 0.0s, 0.15s;
+        }
+        .tabitem:hover {
+            color: var(--slideTextColor);
+            cursor: pointer;
+            background-position: -100% 100%;
         }
         .tabitem--inactive {
             opacity: 0.3;
             filter: grayscale(100%);
         }
         .tabitem__icon {
+            height: 100%;
             color: rgba(255, 255, 255, 0.9);
-            //margin-top: 1rem;
+            margin: -1rem 0rem 1rem 0rem;
             transform: scale(0.2);
             font-size: 1rem;
         }
@@ -157,17 +177,16 @@
             //display: block;
             //top: -20rem;
             // color: dimgrey;
+            color: var(--initialTextColor);
             margin-top: -3rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
             //margin: 1rem 0;
         }
     }
     &_body {
         flex: 3;
         //width: 35rem;
-        text-align: center;
-        font-size: 22px;
-        color: fuchsia;
+        //text-align: center;
     }
 }
 
@@ -179,9 +198,9 @@
 
 .user {
     position: absolute;
-    width: 40rem;
+    width: 100%;
     height: 20rem;
-    margin: 20rem 1rem 0 3rem;
+    margin: 25rem 1rem 0 3rem;
     text-align: center;
     visibility: hidden;
     transition: 0.5s cubic-bezier(.55, 0, .1, 1);
@@ -201,7 +220,7 @@
     //background-color: chartreuse;
     margin-left: -1rem;
     &_title {
-        font-size: 2rem;
+        font-size: 3rem;
         align-content: center;
     }
     &_icons {
@@ -213,8 +232,8 @@
         opacity: 0;
         //transform: translate(0px, -10px);
         &>i {
-            margin: 2rem 0rem;
-            font-size: 3rem;
+            margin: 3rem 0rem 3rem 0rem;
+            font-size: 3.5rem;
             color: #37474f;
             &:hover {
                 color: purple;
@@ -248,7 +267,7 @@
 
 .profile>span {
     line-height: 3rem;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     display: block;
     font-style: none;
@@ -256,7 +275,8 @@
 }
 
 .active .profile {
-    margin: 0.5rem;
+    font-size: 1.5rem;
+    margin: 0.5rem 0rem 1rem 0rem;
     transform: translate(0px, 0px);
     opacity: 1;
     transition: 0.3s 0.8s cubic-bezier(.55, 0, .1, 1);

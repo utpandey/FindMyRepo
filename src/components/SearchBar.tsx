@@ -1,14 +1,14 @@
 import React,{useState} from 'react';
 import { ISearchBar } from '../interfaces/interfaces';
 
-const SearchBar: React.FC<ISearchBar> = ({id,label,value, onChange,locked,active}) => {
+const SearchBar: React.FC<ISearchBar> = ({id,label,value, onChange,locked,active,padding}) => {
 
     const [activeS, setActive] = useState<boolean>(locked && active|| false);
     const [valueS, setValue] = useState<string>(value || "");
     const [error, setError] = useState<string>("");
     // const [label, setLabel] = useState<string>("Label");
 
-    const fieldClassName = `field ${(locked ? active : active || value) &&
+    const fieldClassName = `field ${(padding ? 'padding' : '')} ${(locked ? active : active || value) &&
         "active"} ${locked && !active && "locked"}`;
 
     const changeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,12 +17,6 @@ const SearchBar: React.FC<ISearchBar> = ({id,label,value, onChange,locked,active
         setError("");
         setValue(e.target.value);
         }
-        
-    // const handleKeyPress = (event: KeyboardEvent) => {
-    //         if (event.which === 13) {
-    //         setValue(predicted);
-    //         }
-    //     }
     
     return (
         <>

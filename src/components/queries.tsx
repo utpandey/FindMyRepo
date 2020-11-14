@@ -12,56 +12,69 @@ export const SEARCH_FOR_USERS = gql `
             resourcePath
             websiteUrl
             url
-            commitComments(first:2){
-                totalCount
+            commitComments(last:2){
+                totalCount,
+                edges{
+                    node{
+                        body,position,publishedAt,repository{name},url,
+                    }
+                }
             }
             company
-            followers(first:2){
+            followers(last:2){
                 totalCount
             }
-            following(first:2){
+            following(last:2){
                 totalCount
             }
             isCampusExpert
-            issueComments(first:2){
+            issueComments(last:2){
                 totalCount
             }
-            issues(first:2){
+            issues(last:2){
                 totalCount
             }
             location
             name
-            organizations(first:5){
+            organizations(last:5){
                 totalCount
             }
-            pinnedItems(first:2){
-                totalCount,
-            }
-            projects(first:5){
-                totalCount
-            }
-            pullRequests(first:2){
+            pinnedItems(last:3){
                 totalCount,
                 edges{
                     node{
-                        body,title,state,number
+                        ... on Repository {
+                            description,forkCount,nameWithOwner,name,primaryLanguage{name,color,id},
+                            url,stargazerCount,openGraphImageUrl,licenseInfo{nickname}
+                        }
                     }
                 }
             }
-            repositories(first:2){
+            projects(last:5){
+                totalCount
+            }
+            pullRequests(last:2){
+                totalCount,
+                edges{
+                    node{
+                        title,state,number,closedAt,permalink,publishedAt
+                    }
+                }
+            }
+            repositories(last:6){
                 totalCount
                 totalDiskUsage
                 edges{
                     node{
-                        id
-                        name
+                        id,nameWithOwner,licenseInfo{nickname},url,primaryLanguage{name,color},
+                        updatedAt,openGraphImageUrl,stargazerCount
                     }
                 } 
             }
-            repositoriesContributedTo(first:5){
+            repositoriesContributedTo(last:5){
                 totalCount
             }
-            starredRepositories(first:5){
+            starredRepositories(last:5){
                 totalCount
             }
             status{
@@ -69,7 +82,7 @@ export const SEARCH_FOR_USERS = gql `
                 id
             }
             twitterUsername
-            watching(first:2){
+            watching(last:2){
                 totalCount
             }
         }

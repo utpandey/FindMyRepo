@@ -25,10 +25,10 @@ const Forks = ({data,i}) => {
         <List as='ol'>
             {/* <List.Item as='li' className="pull_contents">Author : {login}</List.Item> */}
             <List.Item as='li' className="pull_contents">Label Name : {name}</List.Item>
-            <List.Item as='li' className="pull_contents">Created at : {createdAt ? createdAt : "Not Provided"}</List.Item>
+            <List.Item as='li' className="pull_contents">Created at : {createdAt ? createdAt : "Not Available"}</List.Item>
             <List.Item as='li' className="pull_contents">Updated at : {updatedAt}</List.Item>
-            <List.Item as='li' className="pull_contents">Resource path : {resourcePath ? resourcePath : "Not Provided"}</List.Item> 
-            <List.Item as='li' className="pull_contents">Description : {description ? description : 'Not Provided'}</List.Item>
+            <List.Item as='li' className="pull_contents">Resource path : {resourcePath ? resourcePath : "Not Available"}</List.Item> 
+            <List.Item as='li' className="pull_contents">Description : {description ? description : 'Not Available'}</List.Item>
         </List>
     </div>
 )

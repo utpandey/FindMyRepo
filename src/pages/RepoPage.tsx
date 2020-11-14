@@ -12,11 +12,11 @@ import { motion } from 'framer-motion';
 const RepoPage = () => {
 
   const [searchTerm, setSearchTerm] = useState('');
-
+  const padding = true;
   return (
     <ApolloProvider client={client}>
       <div className="repo__container">
-        <SearchBar value={searchTerm} onChange={setSearchTerm} id={1} locked={false} active={false} label="Repository" />
+        <SearchBar padding={padding} value={searchTerm} onChange={setSearchTerm} id={1} locked={false} active={false} label="Repository" />
         {/* <Repo searchTerm={searchTerm} /> */}
         <RepositoryList searchTerm={searchTerm}/>
       </div>

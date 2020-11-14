@@ -1,12 +1,17 @@
 // SEARCH_BAR /////////////////////////////////////////////////
 .field {
     width: 70%;
-    left: 10rem;
+    //left: 10rem;
     height: 50px;
     border-radius: 4px;
+    // margin-bottom: 10rem;
     position: relative;
     background-color: rgba(255, 255, 255, 0.3);
     transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out;
+}
+
+.padding {
+    margin-left: 20rem;
 }
 
 .field:hover {

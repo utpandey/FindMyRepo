@@ -1,59 +1,3 @@
-// .repo {
-//     background-color: black;
-//     //padding:30px;
-//     width: 100%;
-//     height: 100%;
-//     //padding: 10px;
-//     display: grid;
-//     grid-template-rows: repeat(4,minmax(150px,min-content));
-//     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-//     // grid-gap: 30px;
-//     // display: flex;
-//     // flex-direction: row;
-//     // justify-content: space-evenly;
-//     justify-items: stretch;
-//     align-items: center; // default stretch
-//     // flex-wrap: wrap;
-// }
-// .item {
-//     padding: 10px;
-//     height: auto;
-//     background-color: red;
-//     // padding: 10px;
-//     margin: 30px;
-//     font-size: 4rem;  
-// }
-// .pull {
-//     grid-column: 1 / -1;
-//     //grid-row: 1/-1;
-// }
-// .commit {
-//     grid-column: 1 / 6;
-// }
-// .forks {
-//      grid-column: 6 / 10;
-// }
-// .issues {
-// grid-column: 1 / 6;
-// }
-// .labels {
-//     grid-column: 6 / 10;
-// }
-// .languages {
-// grid-column: 1 / 6;
-// }
-// .watchers {
-// grid-column: 6 / 10;
-// }
-// @media (max-width: 768px){
-//     .commit {
-//     grid-column: 1 / -1;
-//     }
-//     .forks {
-//      grid-column: 1 / -1;
-//      grid-row: 10/13;
-// }
-// }
 .repo {
     //background-color: black;
     //padding:30px;
@@ -63,13 +7,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    // grid-gap: 30px;
-    // display: flex;
-    // flex-direction: row;
-    // justify-content: space-evenly;
-    // justify-items: stretch;
-    // align-items: center; // default stretch
-    // flex-wrap: wrap;
 }
 
 .pull {
@@ -123,6 +60,7 @@
     text-decoration: none;
     z-index: 0;
     overflow: hidden;
+    transition: 0.15s ease-in-out;
     &:before {
         content: "";
         position: absolute;
@@ -144,10 +82,12 @@
 
 .card:hover {
     .pull_contents {
-        color: white;
+        color: rgb(219, 215, 215);
+        font-size: 2rem;
     }
     .card_title {
         color: white;
+        //font-size: 3rem;
     }
     p {
         transition: all 0.3s ease-out;
@@ -163,12 +103,12 @@
     color: black;
     font-size: 1.5rem;
     font-family: 'Oregano';
+    transition: 0.15s ease-in-out;
 }
 
 .card_title {
     color: black;
     font-family: 'Oregano', cursive;
-    
     font-size: 2rem;
     margin-bottom: 2rem;
 }

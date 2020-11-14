@@ -1,0 +1,34 @@
+.comment_container{
+    margin: 2rem 3rem 0rem 3rem;
+}
+.comment_header{
+    color: black;
+    font-size: 3rem;
+    margin: 5rem 0rem 8rem 0rem;
+}
+.Comment {
+    background-color: #9088d4;
+    margin-right: 6rem;
+    padding: 2rem 5rem 0rem 3rem;
+    transition: 0.35s ease-in-out;
+    border-radius: 1rem;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0.5rem 0.5rem 2rem #888888;
+    }
+    &__text {
+        color: black;
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+    &__repo{
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+    }
+    &__repo:hover{
+        cursor: pointer;
+        color: blue;
+        transform: scale(1.02);
+        
+    }
+}

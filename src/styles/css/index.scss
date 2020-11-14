@@ -3,11 +3,14 @@
 @import "../base/base";
 @import "../pages/_home.scss";
 @import "../pages/_users.scss";
+@import "../pages/_repo.scss";
 @import '../components/_searchBar.scss';
 @import '../components/_header.scss';
 @import "../components/_userCard.scss";
 @import "../components/_userCard1.scss";
-@import "../components/_about.scss";
-@import "../components/_profile.scss";
 @import "../components/_repolist.scss";
 @import "../components/_repo.scss";
+@import "../components/tabComponents/_pinItem.scss";
+@import "../components/tabComponents/_repositoryItem.scss";
+@import "../components/tabComponents/_pullItem.scss";
+@import "../components/tabComponents/_commentItem.scss";

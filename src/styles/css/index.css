@@ -42,18 +42,22 @@ div {
 
 html {
   font-size: 62.5%; }
-  @media only screen and (max-width: 75em) {
-    html {
-      font-size: 56.25%; } }
-  @media only screen and (max-width: 56.25em) {
-    html {
-      font-size: 50%; } }
-  @media only screen and (max-width: 37.5em) {
-    html {
-      font-size: 36%; } }
-  @media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 75%; } }
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%; } }
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%; } }
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 36%; } }
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%; } }
 
 body {
   /* background: rgb(100, 0, 123); */
@@ -165,16 +169,26 @@ li span.active::before {
   display: inline-block; }
 
 .user__container {
-  text-align: center; }
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.repo__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 .field {
   width: 70%;
-  left: 10rem;
   height: 50px;
   border-radius: 4px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.3);
   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out; }
+
+.padding {
+  margin-left: 20rem; }
 
 .field:hover {
   background-color: rgba(255, 255, 255, 0.45);
@@ -275,24 +289,28 @@ header .pizza-svg {
   background-color: none; }
 
 .user_card {
-  height: 50rem;
-  width: 45rem;
+  height: 60rem;
+  width: 100rem;
   background: #fff;
   font-family: Roboto;
   display: block;
-  position: relative;
-  margin: 10rem auto;
+  position: absolute;
+  margin-top: 12rem;
+  margin-bottom: 2rem;
   border-radius: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.2s ease-in-out; }
-  .user_card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.user_card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 .fab {
   position: absolute;
   width: 7rem;
   height: 8rem;
   margin-top: 0;
+  width: 100%;
+  margin-left: 50px;
   visibility: hidden;
   background-color: #ffd54f;
   border-radius: 1rem;
@@ -310,9 +328,9 @@ header .pizza-svg {
 
 .avatar {
   margin-left: 0rem;
-  width: 10rem;
-  height: 10rem;
-  font-size: 2em;
+  width: 15rem;
+  height: 15rem;
+  font-size: 2rem;
   line-height: 60px;
   color: #37474f;
   border-radius: 50%;
@@ -320,82 +338,101 @@ header .pizza-svg {
   transition: 0.6s ease-in-out;
   cursor: pointer;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-  .avatar > img {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%; }
+
+.avatar > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%; }
 
 .active .avatar {
-  transform: scale(1.5);
+  transform: scale(1.2);
   margin-top: 5rem;
-  margin-left: 17rem;
+  margin-left: 45rem;
   transition: 0.6s ease-in-out;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
-  .active .avatar > img {
-    height: 100%;
-    width: 100%;
-    border-radius: 50%; }
+
+.active .avatar > img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%; }
 
 .active .avatar:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
 
 .fabs {
   position: absolute;
-  margin-top: -30px;
-  margin-left: 40rem;
+  margin-top: -4rem;
+  margin-left: 90rem;
   overflow: hidden;
-  width: 10rem;
-  height: 10rem;
-  border-radius: 1rem;
+  width: 15rem;
+  height: 15rem;
   transition: 1s ease-in-out;
-  border-radius: 50%;
   justify-content: center; }
 
 .active .fabs {
   margin-top: 0px;
   margin-left: 0px;
-  height: 50rem;
-  width: 45rem;
+  height: 60rem;
+  width: 100%;
   transition: 0.4s ease-in-out;
   border-radius: 1rem; }
 
 .content {
   border-radius: 1rem;
   position: absolute;
-  height: 50rem;
+  height: 100%;
   width: 100%;
-  overflow-y: auto;
+  overflow: hidden;
   transition: 0.5s 0.3s cubic-bezier(0.55, 0, 0.1, 1);
   display: flex;
   flex-direction: row; }
-  .content_tabs {
-    flex: 0.5;
-    display: flex;
-    flex-direction: column;
-    height: 100%; }
-    .content_tabs .tabitem {
-      cursor: pointer;
-      height: 25%;
-      text-align: center;
-      background-color: #7E57C2;
-      display: flex;
-      flex-direction: column; }
-    .content_tabs .tabitem--inactive {
-      opacity: 0.3;
-      filter: grayscale(100%); }
-    .content_tabs .tabitem__icon {
-      color: rgba(255, 255, 255, 0.9);
-      transform: scale(0.2);
-      font-size: 1rem; }
-    .content_tabs .tabitem__title {
-      overflow-wrap: break-word;
-      margin-top: -3rem;
-      font-size: 1rem; }
-  .content_body {
-    flex: 3;
-    text-align: center;
-    font-size: 22px;
-    color: fuchsia; }
+
+.content_tabs {
+  flex: 0.5;
+  display: flex;
+  flex-direction: column;
+  height: 100%; }
+
+.content_tabs .tabitem {
+  --initialTextColor: #FFF;
+  --slideTextColor: #272838;
+  --initialBgColor: #7E57C2;
+  --slideBgColor: #FFF;
+  cursor: pointer;
+  height: 25%;
+  text-align: center;
+  background-color: #7E57C2;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(90deg, var(--initialBgColor) 0%, var(--initialBgColor) 50%, var(--slideBgColor) 50%, var(--slideBgColor) 100%);
+  background-size: 200%;
+  transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63), color 0.2s linear;
+  transition-delay: 0.0s, 0.15s; }
+
+.content_tabs .tabitem:hover {
+  color: var(--slideTextColor);
+  cursor: pointer;
+  background-position: -100% 100%; }
+
+.content_tabs .tabitem--inactive {
+  opacity: 0.3;
+  filter: grayscale(100%); }
+
+.content_tabs .tabitem__icon {
+  height: 100%;
+  color: rgba(255, 255, 255, 0.9);
+  margin: -1rem 0rem 1rem 0rem;
+  transform: scale(0.2);
+  font-size: 1rem; }
+
+.content_tabs .tabitem__title {
+  overflow-wrap: break-word;
+  color: var(--initialTextColor);
+  margin-top: -3rem;
+  font-size: 1.2rem; }
+
+.content_body {
+  flex: 3; }
 
 .active .content {
   transform: scale(0.2);
@@ -404,9 +441,9 @@ header .pizza-svg {
 
 .user {
   position: absolute;
-  width: 40rem;
+  width: 100%;
   height: 20rem;
-  margin: 20rem 1rem 0 3rem;
+  margin: 25rem 1rem 0 3rem;
   text-align: center;
   visibility: hidden;
   transition: 0.5s cubic-bezier(0.55, 0, 0.1, 1); }
@@ -419,22 +456,26 @@ header .pizza-svg {
   flex-direction: column;
   align-content: center;
   margin-left: -1rem; }
-  .heading_title {
-    font-size: 2rem;
-    align-content: center; }
-  .heading_icons {
-    line-height: 40px;
-    font-size: 2rem;
-    color: #37474f;
-    cursor: pointer;
-    transition: 0.2s cubic-bezier(0.55, 0, 0.1, 1);
-    opacity: 0; }
-    .heading_icons > i {
-      margin: 2rem 0rem;
-      font-size: 3rem;
-      color: #37474f; }
-      .heading_icons > i:hover {
-        color: purple; }
+
+.heading_title {
+  font-size: 3rem;
+  align-content: center; }
+
+.heading_icons {
+  line-height: 40px;
+  font-size: 2rem;
+  color: #37474f;
+  cursor: pointer;
+  transition: 0.2s cubic-bezier(0.55, 0, 0.1, 1);
+  opacity: 0; }
+
+.heading_icons > i {
+  margin: 3rem 0rem 3rem 0rem;
+  font-size: 3.5rem;
+  color: #37474f; }
+
+.heading_icons > i:hover {
+  color: purple; }
 
 .active .heading_icons {
   transform: translate(0px, 0px);
@@ -457,14 +498,15 @@ header .pizza-svg {
 
 .profile > span {
   line-height: 3rem;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   display: block;
   font-style: none;
   color: #37474f; }
 
 .active .profile {
-  margin: 0.5rem;
+  font-size: 1.5rem;
+  margin: 0.5rem 0rem 1rem 0rem;
   transform: translate(0px, 0px);
   opacity: 1;
   transition: 0.3s 0.8s cubic-bezier(0.55, 0, 0.1, 1); }
@@ -504,36 +546,20 @@ header .pizza-svg {
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.2); }
 
-.about {
-  width: 95%;
-  height: 100%;
-  margin: 10px auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  color: black; }
-  .about__item {
-    padding: 5px; }
-  .about__item > h3 {
-    font-size: 1.5rem;
-    color: black; }
-  .about__item > p {
-    font-size: 1rem;
-    color: black; }
-
 .repolist {
   height: 100%;
-  padding: 5rem;
+  width: 100%;
   margin-top: 10rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   overflow-x: hidden; }
-  @media only screen and (max-width: 37.5em) {
-    .repolist {
-      padding: 0rem;
-      flex-direction: column;
-      align-content: center; } }
+
+@media only screen and (max-width: 37.5em) {
+  .repolist {
+    padding: 0rem;
+    flex-direction: column;
+    align-content: center; } }
 
 .go-corner {
   transition: all 0.3s ease-out;
@@ -574,30 +600,35 @@ header .pizza-svg {
   /* Same as width, sets height */
   margin-bottom: 4rem;
   /* (100-32*3)/2 */ }
-  .repoList_cards:hover {
-    border: 1px solid #CD3D73; }
-  .repoList_cards h3 {
-    margin-top: 8px; }
-  .repoList_cards .go-corner {
-    background-color: #00838d;
-    height: 100%;
-    width: 2.5rem;
-    padding-right: 1rem;
-    border-radius: 0;
-    transform: skew(6deg);
-    margin-right: -5rem;
-    align-items: start;
-    background-image: linear-gradient(-45deg, #8F479A 1%, #DC2A74 100%); }
-  .repoList_cards .go-arrow {
-    transform: skew(-6deg) scale(2);
-    margin-left: 1rem;
-    margin-top: 1rem;
-    opacity: 0; }
-  @media only screen and (max-width: 37.5em) {
-    .repoList_cards {
-      width: 50%;
-      padding: 2rem;
-      margin: 2rem; } }
+
+.repoList_cards:hover {
+  border: 1px solid #CD3D73; }
+
+.repoList_cards h3 {
+  margin-top: 8px; }
+
+.repoList_cards .go-corner {
+  background-color: #00838d;
+  height: 100%;
+  width: 2.5rem;
+  padding-right: 1rem;
+  border-radius: 0;
+  transform: skew(6deg);
+  margin-right: -5rem;
+  align-items: start;
+  background-image: linear-gradient(-45deg, #8F479A 1%, #DC2A74 100%); }
+
+.repoList_cards .go-arrow {
+  transform: skew(-6deg) scale(2);
+  margin-left: 1rem;
+  margin-top: 1rem;
+  opacity: 0; }
+
+@media only screen and (max-width: 37.5em) {
+  .repoList_cards {
+    width: 50%;
+    padding: 2rem;
+    margin: 2rem; } }
 
 .repoList_cards::after {
   content: "";
@@ -616,10 +647,12 @@ header .pizza-svg {
 .repoList_cards:hover {
   -webkit-transform: scale(1.25, 1.25);
   transform: scale(1.15, 1.15); }
-  .repoList_cards:hover .go-corner {
-    margin-right: -1.5rem; }
-  .repoList_cards:hover .go-arrow {
-    opacity: 1; }
+
+.repoList_cards:hover .go-corner {
+  margin-right: -1.5rem; }
+
+.repoList_cards:hover .go-arrow {
+  opacity: 1; }
 
 .repoList_cards:hover::after {
   opacity: 1; }
@@ -633,9 +666,10 @@ header .pizza-svg {
 .nameImage > h3 {
   color: black;
   font-size: 4rem; }
-  @media only screen and (max-width: 75em) {
-    .nameImage > h3 {
-      font-size: 2.5rem; } }
+
+@media only screen and (max-width: 75em) {
+  .nameImage > h3 {
+    font-size: 2.5rem; } }
 
 .repoList_cards > p {
   font-size: 1.7rem;
@@ -655,9 +689,10 @@ header .pizza-svg {
   display: flex;
   flex-direction: row;
   justify-content: space-between; }
-  @media only screen and (max-width: 75em) {
-    .nameImage {
-      margin: 1rem; } }
+
+@media only screen and (max-width: 75em) {
+  .nameImage {
+    margin: 1rem; } }
 
 .repo {
   width: 100%;
@@ -704,25 +739,29 @@ header .pizza-svg {
   padding: 32px 24px;
   text-decoration: none;
   z-index: 0;
-  overflow: hidden; }
-  .card:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    top: -16px;
-    right: -16px;
-    background: radial-gradient(circle, #7E57C2 0%, #7E57C2 100%);
-    height: 32px;
-    width: 32px;
-    border-radius: 32px;
-    transform: scale(1);
-    transform-origin: 50% 50%;
-    transition: transform 0.75s ease-out; }
-  .card:hover:before {
-    transform: scale(121); }
+  overflow: hidden;
+  transition: 0.15s ease-in-out; }
+
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: radial-gradient(circle, #7E57C2 0%, #7E57C2 100%);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.75s ease-out; }
+
+.card:hover:before {
+  transform: scale(121); }
 
 .card:hover .pull_contents {
-  color: white; }
+  color: #dbd7d7;
+  font-size: 2rem; }
 
 .card:hover .card_title {
   color: white; }
@@ -738,10 +777,176 @@ header .pizza-svg {
 .pull_contents {
   color: black;
   font-size: 1.5rem;
-  font-family: 'Oregano'; }
+  font-family: 'Oregano';
+  transition: 0.15s ease-in-out; }
 
 .card_title {
   color: black;
   font-family: 'Oregano', cursive;
   font-size: 2rem;
   margin-bottom: 2rem; }
+
+.pin__container {
+  height: 100%;
+  width: 100%;
+  margin: 2rem 3rem 0rem 3rem; }
+
+.pin__header {
+  color: black;
+  font-size: 3rem;
+  margin: 5rem 0rem 8rem 0rem; }
+
+.Pin {
+  background-color: #9088d4;
+  margin-right: 6rem;
+  padding: 2rem 5rem 0rem 3rem;
+  transition: 0.35s ease-in-out;
+  border-radius: 1rem; }
+
+.Pin:hover {
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 2rem #888888; }
+
+.Pin__primary {
+  display: flex;
+  justify-content: space-between; }
+
+.Pin__primary__icon {
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.35s ease-in-out; }
+
+.Pin__primary__icon:hover {
+  transform: scale(1.5); }
+
+.Pin__primary__name {
+  color: blue;
+  font-size: 2rem;
+  margin-left: -10rem; }
+
+.Pin__primary__star {
+  color: black;
+  font-size: 1.5rem; }
+
+.Pin__text {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 3.5rem; }
+
+.Pin__desc {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 3.5rem;
+  margin-bottom: 2rem; }
+
+.repo_container {
+  margin: 2rem 3rem 0rem 3rem; }
+
+.repo_header {
+  color: black;
+  font-size: 3rem;
+  margin: 5rem 0rem 8rem 0rem; }
+
+.Repo {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 1rem 0rem 1rem; }
+
+.Repo__icon {
+  transform: scale(1);
+  font-size: 2rem;
+  float: left;
+  cursor: pointer;
+  transition: 0.20s ease-in-out; }
+
+.Repo__icon:hover {
+  transform: scale(0.7); }
+
+.Repo__icon:active {
+  transform: scale(1); }
+
+.Repo__name {
+  font-size: 1.5rem;
+  color: blue; }
+
+.Repo__star {
+  font-size: 1rem;
+  color: black; }
+
+.date {
+  width: 70%;
+  margin: 1rem 0rem 1.5rem 5rem;
+  color: #696969;
+  font-size: 1rem;
+  font-style: italic;
+  border-bottom: 0.1rem solid #696969;
+  width: 90%; }
+
+.pull_container {
+  margin: 2rem 3rem 0rem 3rem; }
+
+.pull_header {
+  color: black;
+  font-size: 3rem;
+  margin: 5rem 0rem 8rem 0rem; }
+
+.Pull {
+  background-color: #9088d4;
+  margin-right: 6rem;
+  padding: 2rem 5rem 0rem 3rem;
+  transition: 0.35s ease-in-out;
+  border-radius: 1rem; }
+
+.Pull:hover {
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 2rem #888888; }
+
+.Pull__text {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  transition: 0.25s ease-in-out; }
+
+.title:hover {
+  cursor: pointer;
+  color: blue;
+  transform: scale(1.02); }
+
+.publish {
+  padding-bottom: 2rem; }
+
+.comment_container {
+  margin: 2rem 3rem 0rem 3rem; }
+
+.comment_header {
+  color: black;
+  font-size: 3rem;
+  margin: 5rem 0rem 8rem 0rem; }
+
+.Comment {
+  background-color: #9088d4;
+  margin-right: 6rem;
+  padding: 2rem 5rem 0rem 3rem;
+  transition: 0.35s ease-in-out;
+  border-radius: 1rem; }
+
+.Comment:hover {
+  transform: scale(1.05);
+  box-shadow: 0.5rem 0.5rem 2rem #888888; }
+
+.Comment__text {
+  color: black;
+  font-size: 1.5rem;
+  line-height: 2.5rem; }
+
+.Comment__repo {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem; }
+
+.Comment__repo:hover {
+  cursor: pointer;
+  color: blue;
+  transform: scale(1.02); }

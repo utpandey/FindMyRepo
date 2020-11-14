@@ -20,7 +20,8 @@ export interface IModal  {
 
 export interface ISearch {
   onClick: any,
-  isOpen: any
+  isOpen: any,
+  
 }
 
 export interface IExpand {
@@ -33,7 +34,8 @@ export interface ISearchBar {
   id: number
   locked: boolean,
   active: boolean,
-  label: any
+  label: any,
+  padding: any
 }
 
 export interface IUser {

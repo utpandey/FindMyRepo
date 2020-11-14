@@ -10,6 +10,7 @@ const useStyles = makeStyles({
   note: {
     fontSize: '1.5rem',
     marginTop: '1rem',
+    padding: '1rem',
     textAlign: 'center',
   },
   spinnerContainer: {
@@ -28,43 +29,58 @@ const RepositoryList = ({searchTerm}) => {
     {variables: {search_term: debouncedSearchTerm}}
     );
 
-  
-  useEffect(() => {
-    setExpandedRepo(null);
-  }, [data]);
+//   if (loading) {
+//     return (
+//       <div className={classes.spinnerContainer}>
+//         <CircularProgress />
+//       </div>
+//     );
+//   }
 
-  if (loading) {
-    return (
-      <div className={classes.spinnerContainer}>
-        <CircularProgress />
+//   if (error) {
+//     return (
+//     <div
+//     >
+//         error
+//     </div>
+//     )
+// }
+if (loading) {
+  return (
+      <div >
+      Loading...
       </div>
-    );
-  }
+);
+}
 
-  if (error) {
-    return (
-      <Typography
-        variant={'overline'}
-        className={classes.note}
-        component={'div'}
-        color={'error'}
-      >
-        {error}
-      </Typography>
-    )
-  }
+if (error) {
+return (
+<div
+>
+  error
+</div>
+)
+}
 
-  if (!data.search.repositoryCount) {
-    return (
-      <Typography
-        variant={'overline'}
-        className={classes.note}
-        component={'div'}
-      >
-        There are no such repositories!
-      </Typography>
-    )
-  }
+if (!data.search.repositoryCount) {
+return (
+<div
+>
+  There are no such Users!
+</div>
+)
+}
+  // if (!data.search.repositoryCount) {
+  //   return (
+  //     <Typography
+  //       variant={'overline'}
+  //       className={classes.note}
+  //       component={'div'}
+  //     >
+  //       There are no such repositories!
+  //     </Typography>
+  //   )
+  // }
 // tslint:disable-next-line:no-console
 console.log(data.rateLimit)
 // tslint:disable-next-line:no-console

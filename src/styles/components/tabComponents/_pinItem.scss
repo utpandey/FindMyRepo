@@ -1,0 +1,67 @@
+.pin__container {
+    height: 100%;
+    width: 100%;
+    margin: 2rem 3rem 0rem 3rem; //align-content: center;
+}
+
+.pin__header {
+    color: black;
+    font-size: 3rem;
+    margin: 5rem 0rem 8rem 0rem;
+}
+
+.Pin {
+    background-color: #9088d4;
+    //height: 5rem;
+    //width: 50rem;
+    margin-right: 6rem;
+    padding: 2rem 5rem 0rem 3rem;
+    transition: 0.35s ease-in-out;
+    border-radius: 1rem;
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0.5rem 0.5rem 2rem #888888;
+    }
+    &__primary {
+        display: flex;
+        justify-content: space-between;
+        //padding: 1rem 5rem 0rem 1rem;
+        //width: 70%;
+        &__icon {
+            width: 5%;
+            height: 5%;
+            //font-size: 1rem;
+            // transform: scale(0.2);
+            border-radius: 50%;
+            // float: left;
+            cursor: pointer;
+            transition: 0.35s ease-in-out;
+            &:hover{
+                transform: scale(1.5);
+            }
+        }
+        &__name {
+            color: blue;
+            font-size: 2rem;
+            margin-left: -10rem;
+        }
+        &__star {
+            color: black;
+            font-size: 1.5rem;
+        }
+    }
+    &__text {
+        //background-color: pink;
+        // margin: 2rem 1rem 1rem 2rem;
+        //width: 80%;
+        color: black;
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+    }
+    &__desc {
+        color: black;
+        font-size: 1.5rem;
+        line-height: 3.5rem;
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,44 @@
+.repo_container{
+    margin: 2rem 3rem 0rem 3rem;
+}
+.repo_header {
+    color: black;
+    font-size: 3rem;
+    margin: 5rem 0rem 8rem 0rem;
+}
+.Repo{
+    display: flex;
+    justify-content: space-between;
+    padding: 0rem 1rem 0rem 1rem;
+    
+    &__icon {
+        transform:scale(1);
+        font-size: 2rem;
+        float: left;
+        cursor: pointer;
+        transition: 0.20s ease-in-out;
+        &:hover{
+            transform: scale(0.7);
+        }
+        &:active{
+            transform: scale(1);
+        }
+    }
+    &__name{
+        font-size: 1.5rem;
+        color: blue;
+    }
+    &__star {
+        font-size: 1rem;
+        color: black;
+    }
+}
+.date{
+    width: 70%;
+    margin: 1rem 0rem 1.5rem 5rem;
+    color: #696969;
+    font-size: 1rem;
+    font-style: italic;
+    border-bottom: 0.1rem solid #696969;
+    width: 90%;
+}

@@ -13,7 +13,7 @@ const Watchers = ({data,i}) => {
         <List as='ol'>
             <List.Item as='li' className="pull_contents">Username : {login}</List.Item>
             <List.Item as='li' className="pull_contents">User Url : {url}</List.Item>
-            <List.Item as='li' className="pull_contents">user Location : {location ? location : "Not Provided"}</List.Item>
+            <List.Item as='li' className="pull_contents">user Location : {location ? location : "Not Available"}</List.Item>
             {/* <List.Item as='li' className="pull_contents">Issue-Number : {issueNumber}</List.Item>
             <List.Item as='li' className="pull_contents">Issue-State : {state}</List.Item> */}
         </List>
