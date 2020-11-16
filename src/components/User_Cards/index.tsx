@@ -3,7 +3,6 @@ import PullItem from './PullItem';
 import PinItem from './PinItem';
 import CommitItem from './CommitItem';
 import RepoItem from './RepoItem';
-import { List } from 'semantic-ui-react'
 import { IIndex } from '../../interfaces/UserCardTypes/types';
 
 export const Pull: React.FC<IIndex> = ({data}) => {

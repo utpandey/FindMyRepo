@@ -1,5 +1,5 @@
 import React from 'react';
-import github__repo from '../../icons/github__repo.svg';
+// import github__repo from '../../icons/github__repo.svg';
 import moment from 'moment';
 import { IRepoItem } from '../../interfaces/UserCardTypes/types';
 // const converter = (date:string) => {
@@ -8,7 +8,7 @@ import { IRepoItem } from '../../interfaces/UserCardTypes/types';
 // }
 const RepoItem: React.FC<IRepoItem>  = ({value}) => {
     const {node: {
-        id,nameWithOwner,url,
+        nameWithOwner,url,
                         updatedAt,openGraphImageUrl,stargazerCount
     }} = value;
     return (

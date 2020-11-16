@@ -1,16 +1,13 @@
-import React,{useLayoutEffect} from 'react';
+import React  from 'react';
 import ReactDOM from 'react-dom';
 import './styles/css/index.css';
-import App from './App';
 import Header from './components/Header';
 import Home from './pages/Home';
-import { createBrowserHistory } from 'history';
-// import Modal from './components/Modal';
 import UsersPage from './pages/UsersPage';
 import Repository from './components/Repository';
 import {AnimatePresence} from 'framer-motion'
 import * as serviceWorker from './serviceWorker';
-import { Switch,Link,Route, BrowserRouter as Router,useLocation } from 'react-router-dom';
+import { Switch,Route, BrowserRouter as Router } from 'react-router-dom';
 import RepoPage from './pages/RepoPage';
 
 // const location = useLocation();

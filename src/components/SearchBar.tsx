@@ -1,22 +1,16 @@
-import React,{useState} from 'react';
+import React from 'react';
 import { ISearchBar } from '../interfaces/interfaces';
 
-const SearchBar: React.FC<ISearchBar> = ({id,label,value, onChange,locked,active,padding}) => {
-
-    const [activeS, setActive] = useState<boolean>(locked && active|| false);
-    const [valueS, setValue] = useState<string>(value || "");
-    const [error, setError] = useState<string>("");
+const SearchBar: React.FC<ISearchBar> = ({label,value, onChange,locked,active,padding}) => {
+    
+      // tslint:disable-next-line:no-console
+    // const [activeS, setActive] = useState<boolean>(locked && active|| false);
+    // const [error, setError] = useState<string>("");
+    const error = "";
     // const [label, setLabel] = useState<string>("Label");
 
     const fieldClassName = `field ${(padding ? 'padding' : '')} ${(locked ? active : active || value) &&
         "active"} ${locked && !active && "locked"}`;
-
-    const changeValue = (e: React.ChangeEvent<HTMLInputElement>) => {
-        // const target = e.target as HTMLTextAreaElement;
-        // const value = target.value;
-        setError("");
-        setValue(e.target.value);
-        }
     
     return (
         <>
@@ -31,9 +25,6 @@ const SearchBar: React.FC<ISearchBar> = ({id,label,value, onChange,locked,active
                 value={value}
                 placeholder={label}
                 onChange={e => onChange(e.target.value)}
-                // onKeyPress={this.handleKeyPress.bind(this)}
-                onFocus={() => !locked && setActive(true)}
-                onBlur={() => !locked && setActive(false)}
             />
             <label className={error && "error"}>
             {error || label}

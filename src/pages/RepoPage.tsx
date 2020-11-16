@@ -1,4 +1,4 @@
-import { ApolloProvider,InMemoryCache,NormalizedCacheObject } from '@apollo/react-hooks';
+import { ApolloProvider } from '@apollo/react-hooks';
 import client from '../components/client';
 import React, { useState} from 'react';
 import SearchBar from '../components/SearchBar'

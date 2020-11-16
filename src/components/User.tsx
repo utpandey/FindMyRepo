@@ -1,8 +1,8 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, } from 'react';
 import classnames from "classnames"
 import {useQuery} from "@apollo/react-hooks";
 import {useDebounce} from "use-debounce";
-import {SEARCH_FOR_REPOS,SEARCH_FOR_USERS} from "./queries";
+import {SEARCH_FOR_USERS} from "./queries";
 import { IUser } from '../interfaces/interfaces';
 import { Pull, Pin ,Comment,Repo} from './User_Cards/index';
 import { motion } from 'framer-motion';
@@ -76,8 +76,6 @@ const TabItemComponent = ({
 const User: React.FC<IUser> = ({ searchTerm }) => {
     const [isOpen, setActive] = useState(false);
     const [active, setTabActive] = useState(0);
-    const [expandedRepo, setExpandedRepo] = useState(null);
-    // const [tabActive, setTabActive] = useState<string>("About");
     const [debouncedSearchTerm] = useDebounce(searchTerm, 3000);
     const {data, loading, error} = useQuery(SEARCH_FOR_USERS,
         {variables: {search_term: debouncedSearchTerm}}

@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import { List } from 'semantic-ui-react'
 import { IPull } from '../../interfaces/RepoCards/index';
 

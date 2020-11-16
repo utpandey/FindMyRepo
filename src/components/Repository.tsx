@@ -47,8 +47,7 @@ const Repository: React.FC = () => {
   // const location = useLocation();
   const { state } = useLocation<IStateType>();
   // console.log(location.data.repo.node);
-  const {node: {description,forkCount,name,url,
-        pullRequests,commitComments,forks,issues,labels,languages,watchers,
+  const {node: {pullRequests,commitComments,forks,issues,labels,languages,watchers,
       }} = state.repo;
   // tslint:disable-next-line:no-console
   // console.log(location.state.repo.node.pullRequests);

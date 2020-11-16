@@ -1,16 +1,8 @@
-import React,{useEffect,useState} from 'react';
+import React from 'react';
 import { List } from 'semantic-ui-react'
 import { IPull } from '../../interfaces/RepoCards/index';
 
 const Commit: React.FC<IPull> = ({data}) => {
-    const [index,setIndex] = useState(0);
-    useEffect(() => {
-        setIndex(index+1);
-      // const {data: {repo:node}} = {location};
-      // tslint:disable-next-line:no-console
-      // console.log(node);
-    },[data])
-
     // tslint:disable-next-line:no-console
     console.log(data);
     const {node:{author:{login},createdAt,path,body,}} = data;
