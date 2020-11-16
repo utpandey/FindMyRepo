@@ -71,6 +71,7 @@ const Header = () => {
 
         <Link to='/'>
           <motion.h1
+            className="findmyrepo"
             // whileHover={{color: 'black',scale: '0.9'}}
           >
           FindMyRepo

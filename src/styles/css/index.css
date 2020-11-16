@@ -43,6 +43,10 @@ div {
 html {
   font-size: 62.5%; }
 
+@media only screen and (min-width: 90em) {
+  html {
+    font-size: 60%; } }
+
 @media only screen and (max-width: 75em) {
   html {
     font-size: 56.25%; } }
@@ -55,9 +59,13 @@ html {
   html {
     font-size: 36%; } }
 
+@media only screen and (max-width: 23.75em) {
+  html {
+    font-size: 36%; } }
+
 @media only screen and (min-width: 112.5em) {
   html {
-    font-size: 75%; } }
+    font-size: 95%; } }
 
 body {
   /* background: rgb(100, 0, 123); */
@@ -90,105 +98,79 @@ button {
 
 /* pages */
 .home h3 {
-  font-size: 3rem;
-  margin-left: 4rem;
+  z-index: 99999;
+  font-size: 4rem;
+  font-family: 'Patrick Hand', cursive;
+  margin-left: 0rem;
   cursor: pointer;
-  width: 220px;
-  /* margin-bottom: 30px; */ }
+  width: 20rem;
+  /* margin-bottom: 30px; */
+  transition: 0.2s ease-in-out;
+  line-height: 4rem; }
+
+.home h3:hover {
+  color: black;
+  transform: scale(0.9); }
+
+@media only screen and (max-width: 75em) {
+  .home h3 {
+    font-size: 4rem;
+    line-height: 4rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .home h3 {
+    font-size: 5rem;
+    line-height: 5rem; } }
 
 .home h3::before {
   content: '>';
   position: relative;
   top: -2px;
-  margin-right: 6px;
+  margin-right: 1rem;
   transform: scale(0.8, 1);
-  display: inline-block; }
+  display: inline; }
 
 .home.container,
 .order.container {
   /* text-align: center; */
-  max-width: 800px;
   display: flex;
   flex-direction: row; }
-
-.home button {
-  color: white;
-  padding: 15px 30px;
-  font-size: 1.6em;
-  border: 3px solid white;
-  margin: 30px 20px; }
-
-.order p {
-  margin: 20px auto; }
-
-.backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 1; }
-
-.modal {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 10px;
-  text-align: center; }
-
-.modal button {
-  color: #444;
-  border-color: #444;
-  font-weight: bold;
-  margin-top: 20px; }
-
-.modal p {
-  color: #444;
-  font-weight: bold; }
 
 .loader {
   cursor: pointer;
   width: 15px;
   height: 15px;
-  /* margin: 40px auto; */
+  margin: 40px auto;
   border-radius: 50%;
   background: #fff; }
 
-/* lists */
-li span.active {
-  font-weight: bold; }
-
-li span.active::before {
-  content: '>';
-  position: relative;
-  top: -2px;
-  margin-right: 6px;
-  transform: scale(0.8, 1);
-  display: inline-block; }
-
 .user__container {
   width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: center; }
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5rem 0rem 0rem 0rem; }
 
 .repo__container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 5rem; }
 
 .field {
   width: 70%;
-  height: 50px;
+  align-self: center;
+  height: 5rem;
   border-radius: 4px;
   position: relative;
   background-color: rgba(255, 255, 255, 0.3);
   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out; }
 
-.padding {
-  margin-left: 20rem; }
+@media only screen and (max-width: 75em) {
+  .field {
+    height: 8rem; } }
 
 .field:hover {
   background-color: rgba(255, 255, 255, 0.45);
@@ -199,7 +181,18 @@ li span.active::before {
   box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.2); }
 
 .field.active input {
-  padding: 0.9rem 2rem 0rem 1rem; }
+  padding: 1rem 2rem 0rem 1rem;
+  font-size: 1.5rem; }
+
+@media only screen and (max-width: 75em) {
+  .field.active input {
+    padding: 2.5rem 2rem 0rem 1rem;
+    font-size: 3rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .field.active input {
+    padding: 3rem 2rem 0rem 1rem;
+    font-size: 3.5rem; } }
 
 .field.active input + label {
   top: 0.2rem;
@@ -213,11 +206,11 @@ li span.active::before {
   width: 100%;
   height: 4rem;
   position: relative;
-  padding: 0rem 0rem 1rem 1rem;
+  padding: 0rem 0rem 0rem 2rem;
   border: none;
   border-radius: 4px;
   font-family: "Gotham SSm A", "Gotham SSm B", sans-serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: normal;
   background-color: transparent;
@@ -226,6 +219,11 @@ li span.active::before {
   box-shadow: 0px 4px 20px 0px transparent;
   transition: 0.3s background-color ease-in-out, 0.3s box-shadow ease-in-out, 0.1s padding ease-in-out;
   -webkit-appearance: none; }
+
+@media only screen and (max-width: 75em) {
+  .field input {
+    padding: 1.5rem 0rem 0rem 2rem;
+    font-size: 3rem; } }
 
 .field input::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8); }
@@ -252,48 +250,133 @@ li span.active::before {
   pointer-events: none;
   transition: 0.1s all ease-in-out; }
 
+@media only screen and (max-width: 75em) {
+  .field input + label {
+    font-size: 2rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .field input + label {
+    padding-top: 0.5rem;
+    font-size: 2.5rem; } }
+
 /* header */
 header {
   display: flex;
-  padding: 40px;
-  align-items: center; }
+  padding: 3rem 0rem 0rem 1.5rem; }
 
 header .title {
   /* display: flex;
     flex-direction: row; */
-  flex-grow: 1;
-  margin-left: 20px;
-  font-size: 1rem;
-  font-family: 'Walter Turncoat', cursive !important; }
+  flex-grow: 1; }
 
-header h1 {
-  border-bottom: 2px solid rgba(204, 204, 204, 0.2);
-  padding-bottom: 10px; }
+.findmyrepo {
+  font-size: 3rem;
+  font-family: 'Walter Turncoat', cursive !important;
+  width: 80%;
+  border-bottom: 0.2rem solid rgba(204, 204, 204, 0.2);
+  padding: 1rem 0rem 1rem 0rem; }
+
+@media only screen and (min-width: 90em) {
+  .findmyrepo {
+    padding: 1rem 0rem 1rem 0rem; } }
+
+@media only screen and (max-width: 75em) {
+  .findmyrepo {
+    font-size: 3.5rem;
+    padding: 1rem 0rem 1rem 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .findmyrepo {
+    font-size: 3.5rem;
+    width: 70%;
+    border-bottom: 0.1rem solid rgba(204, 204, 204, 0.2);
+    padding: 1rem 0rem 1rem 0rem; } }
 
 header .pizza-svg {
-  width: 70px;
-  scale: 5;
+  width: 6rem;
   overflow: visible;
   stroke: #fff;
-  stroke-width: 1;
+  stroke-width: 0.5;
   stroke-linejoin: round;
   stroke-linecap: round;
   /* stroke-miterlimit: "2"; */ }
 
+@media only screen and (min-width: 90em) {
+  header .pizza-svg {
+    width: 10rem; } }
+
+@media only screen and (max-width: 75em) {
+  header .pizza-svg {
+    width: 12rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  header .pizza-svg {
+    width: 12rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  header .pizza-svg {
+    width: 15rem; } }
+
 .logo {
   cursor: pointer; }
 
-.git {
+@media only screen and (max-width: 75em) {
+  .logo {
+    margin-left: 0rem;
+    transform: scale(1.3); } }
+
+@media only screen and (max-width: 37.5em) {
+  .logo {
+    margin-left: -2rem;
+    transform: scale(1); } }
+
+.repoError {
+  text-align: center;
+  padding: 10rem; }
+
+.loader__user {
+  display: flex;
+  align-self: center;
+  margin-top: 10rem;
+  padding: 0rem 0rem 0rem 0rem;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 100px;
   height: 100px;
-  width: 90px;
-  background-color: none; }
+  background-color: transparent; }
+
+.loader__user div {
+  width: 20px;
+  height: 20px;
+  background: #b3b5b8;
+  border-radius: 50%;
+  animation: loader__user 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate; }
+
+.loader__user div:nth-child(2) {
+  animation-delay: 0.1s;
+  opacity: 0.8; }
+
+.loader__user div:nth-child(3) {
+  animation-delay: 0.2s;
+  opacity: 0.6; }
+
+.loader__user div:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.4; }
+
+@keyframes loader__user {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(-100px); } }
 
 .user_card {
   height: 60rem;
   width: 100rem;
   background: #fff;
   font-family: Roboto;
-  display: block;
+  display: flex;
+  align-self: center;
   position: absolute;
   margin-top: 12rem;
   margin-bottom: 2rem;
@@ -303,6 +386,30 @@ header .pizza-svg {
 
 .user_card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+@media only screen and (max-width: 75em) {
+  .user_card {
+    margin-top: 15rem;
+    height: 90rem;
+    width: 90rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .user_card {
+    margin-top: 15rem;
+    height: 80rem;
+    width: 60rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .user_card {
+    margin-top: 23rem;
+    height: 80rem;
+    width: 60rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .user_card {
+    margin-top: 20rem;
+    height: 80rem;
+    width: 50rem; } }
 
 .fab {
   position: absolute;
@@ -344,6 +451,11 @@ header .pizza-svg {
   width: 100%;
   border-radius: 50%; }
 
+@media only screen and (max-width: 23.75em) {
+  .avatar {
+    width: 12rem;
+    height: 12rem; } }
+
 .active .avatar {
   transform: scale(1.2);
   margin-top: 5rem;
@@ -362,12 +474,30 @@ header .pizza-svg {
 .fabs {
   position: absolute;
   margin-top: -4rem;
-  margin-left: 90rem;
+  margin-left: 92rem;
   overflow: hidden;
   width: 15rem;
   height: 15rem;
   transition: 1s ease-in-out;
   justify-content: center; }
+
+@media only screen and (max-width: 75em) {
+  .fabs {
+    margin-left: 80rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .fabs {
+    margin-left: 50rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .fabs {
+    margin-left: 22rem;
+    margin-top: -11rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .fabs {
+    margin-left: 18rem;
+    margin-top: -10rem; } }
 
 .active .fabs {
   margin-top: 0px;
@@ -387,11 +517,31 @@ header .pizza-svg {
   display: flex;
   flex-direction: row; }
 
+@media only screen and (max-width: 37.5em) {
+  .content {
+    display: flex;
+    flex-direction: column-reverse; } }
+
 .content_tabs {
   flex: 0.5;
   display: flex;
   flex-direction: column;
   height: 100%; }
+
+@media only screen and (max-width: 75em) {
+  .content_tabs {
+    width: 20%; } }
+
+@media only screen and (max-width: 56.25em) {
+  .content_tabs {
+    width: 20%; } }
+
+@media only screen and (max-width: 37.5em) {
+  .content_tabs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%; } }
 
 .content_tabs .tabitem {
   --initialTextColor: #FFF;
@@ -409,6 +559,18 @@ header .pizza-svg {
   transition: background-position 0.3s cubic-bezier(0.47, 0.1, 1, 0.63), color 0.2s linear;
   transition-delay: 0.0s, 0.15s; }
 
+@media only screen and (max-width: 37.5em) {
+  .content_tabs .tabitem {
+    height: 12rem;
+    width: 100%;
+    top: 5rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .content_tabs .tabitem {
+    height: 10rem;
+    width: 100%;
+    margin-top: 2rem; } }
+
 .content_tabs .tabitem:hover {
   color: var(--slideTextColor);
   cursor: pointer;
@@ -421,15 +583,22 @@ header .pizza-svg {
 .content_tabs .tabitem__icon {
   height: 100%;
   color: rgba(255, 255, 255, 0.9);
-  margin: -1rem 0rem 1rem 0rem;
   transform: scale(0.2);
   font-size: 1rem; }
 
+@media only screen and (max-width: 23.75em) {
+  .content_tabs .tabitem__icon {
+    transform: scale(0.3); } }
+
 .content_tabs .tabitem__title {
   overflow-wrap: break-word;
-  color: var(--initialTextColor);
+  color: black;
   margin-top: -3rem;
   font-size: 1.2rem; }
+
+@media only screen and (max-width: 23.75em) {
+  .content_tabs .tabitem__title {
+    display: none; } }
 
 .content_body {
   flex: 3; }
@@ -552,7 +721,7 @@ header .pizza-svg {
 
 .loader {
   display: flex;
-  padding: 10rem 0rem 0rem 50rem;
+  padding: 10rem 0rem 0rem 0rem;
   justify-content: space-around;
   align-items: flex-end;
   width: 100px;
@@ -587,7 +756,7 @@ header .pizza-svg {
 .repolist {
   height: 100%;
   width: 100%;
-  margin-top: 10rem;
+  padding: 10rem 0rem 0rem 0rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -595,7 +764,7 @@ header .pizza-svg {
 
 @media only screen and (max-width: 37.5em) {
   .repolist {
-    padding: 0rem;
+    margin: 1rem 0rem 0rem 0rem;
     flex-direction: column;
     align-content: center; } }
 
@@ -629,15 +798,17 @@ header .pizza-svg {
   border-radius: 5px;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  padding: 32px 24px;
+  padding: 3rem 3rem 2rem 2rem;
   top: 0px;
   text-decoration: none;
   z-index: 0;
   overflow: hidden;
   width: 35%;
-  /* Same as width, sets height */
-  margin-bottom: 4rem;
-  /* (100-32*3)/2 */ }
+  margin-bottom: 4rem; }
+
+@media only screen and (max-width: 37.5em) {
+  .repoList_cards {
+    padding: 3rem 0rem 2rem 0rem; } }
 
 .repoList_cards:hover {
   border: 1px solid #CD3D73; }
@@ -664,9 +835,9 @@ header .pizza-svg {
 
 @media only screen and (max-width: 37.5em) {
   .repoList_cards {
-    width: 50%;
+    width: 65%;
     padding: 2rem;
-    margin: 2rem; } }
+    margin: 2rem 0rem 5rem 0rem; } }
 
 .repoList_cards::after {
   content: "";
@@ -737,7 +908,8 @@ header .pizza-svg {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  margin: 3rem 0rem 0rem 0rem; }
 
 .pull {
   flex: 1 1 100%;
@@ -801,8 +973,13 @@ header .pizza-svg {
   color: #dbd7d7;
   font-size: 2rem; }
 
+@media only screen and (max-width: 37.5em) {
+  .card:hover .pull_contents {
+    font-size: 4rem;
+    line-height: 6rem; } }
+
 .card:hover .card_title {
-  color: white; }
+  color: #111010; }
 
 .card:hover p {
   transition: all 0.3s ease-out;
@@ -818,21 +995,63 @@ header .pizza-svg {
   font-family: 'Oregano';
   transition: 0.15s ease-in-out; }
 
+@media only screen and (max-width: 37.5em) {
+  .pull_contents {
+    font-size: 3rem;
+    line-height: 5rem; } }
+
 .card_title {
   color: black;
   font-family: 'Oregano', cursive;
   font-size: 2rem;
   margin-bottom: 2rem; }
 
+@media only screen and (max-width: 37.5em) {
+  .card_title {
+    font-size: 4rem;
+    line-height: 6rem; } }
+
 .pin__container {
   height: 100%;
   width: 100%;
   margin: 2rem 3rem 0rem 3rem; }
 
+@media only screen and (max-width: 37.5em) {
+  .pin__container {
+    margin: 2rem 0rem 0rem 1.5rem; } }
+
 .pin__header {
   color: black;
   font-size: 3rem;
   margin: 5rem 0rem 8rem 0rem; }
+
+@media only screen and (max-width: 75em) {
+  .pin__header {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    width: 75%;
+    margin: 3rem 0rem 6rem 0rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .pin__header {
+    line-height: 3rem;
+    font-size: 2.5rem;
+    width: 60%;
+    margin: 3rem 0rem 5rem 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .pin__header {
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 6rem 0rem 4rem 1rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .pin__header {
+    line-height: 2.7rem;
+    font-size: 2.5rem;
+    width: 90%;
+    margin: 4rem 0rem 2rem 1rem; } }
 
 .Pin {
   background-color: #9088d4;
@@ -840,6 +1059,24 @@ header .pizza-svg {
   padding: 2rem 5rem 0rem 3rem;
   transition: 0.35s ease-in-out;
   border-radius: 1rem; }
+
+@media only screen and (max-width: 75em) {
+  .Pin {
+    padding: 3rem 2rem 0rem 3rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Pin {
+    padding: 2rem 0rem 0rem 3rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Pin {
+    padding: 2rem 0rem 0rem 1rem;
+    margin: 0rem 4rem 0rem 1rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .Pin {
+    padding: 3rem 0rem 0rem 1.5rem;
+    margin: 0rem 4rem 0rem 1rem; } }
 
 .Pin:hover {
   transform: scale(1.05);
@@ -856,6 +1093,16 @@ header .pizza-svg {
   cursor: pointer;
   transition: 0.35s ease-in-out; }
 
+@media only screen and (max-width: 75em) {
+  .Pin__primary__icon {
+    width: 7%;
+    height: 7%; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Pin__primary__icon {
+    width: 10%;
+    height: 10%; } }
+
 .Pin__primary__icon:hover {
   transform: scale(1.5); }
 
@@ -863,6 +1110,25 @@ header .pizza-svg {
   color: blue;
   font-size: 2rem;
   margin-left: -10rem; }
+
+@media only screen and (max-width: 75em) {
+  .Pin__primary__name {
+    font-size: 3rem;
+    line-height: 3rem;
+    margin: 0rem 0rem 1rem 2rem;
+    width: 80%; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Pin__primary__name {
+    font-size: 2.5rem;
+    margin: -1rem 4rem 0rem 2rem;
+    line-height: 2.5rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Pin__primary__name {
+    font-size: 2rem;
+    margin: 0rem 1rem 0rem 2rem;
+    line-height: 2rem; } }
 
 .Pin__primary__star {
   color: black;
@@ -873,11 +1139,57 @@ header .pizza-svg {
   font-size: 1.5rem;
   line-height: 3.5rem; }
 
+.Pin__text > span {
+  color: whitesmoke; }
+
+@media only screen and (max-width: 75em) {
+  .Pin__text {
+    font-size: 2rem;
+    line-height: 3.5rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Pin__text {
+    font-size: 2rem;
+    line-height: 3rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Pin__text {
+    font-size: 1.7rem;
+    line-height: 1.5rem; } }
+
 .Pin__desc {
   color: black;
   font-size: 1.5rem;
   line-height: 3.5rem;
   margin-bottom: 2rem; }
+
+.Pin__desc > span {
+  color: whitesmoke; }
+
+@media only screen and (max-width: 75em) {
+  .Pin__desc {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Pin__desc {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Pin__desc {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .Pin__desc {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem; } }
 
 .repo_container {
   margin: 2rem 3rem 0rem 3rem; }
@@ -885,19 +1197,55 @@ header .pizza-svg {
 .repo_header {
   color: black;
   font-size: 3rem;
-  margin: 5rem 0rem 8rem 0rem; }
+  margin: 5rem 0rem 5rem 0rem; }
+
+@media only screen and (max-width: 75em) {
+  .repo_header {
+    margin-bottom: 10rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .repo_header {
+    width: 80%;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .repo_header {
+    font-size: 2.5rem;
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 4.5rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .repo_header {
+    font-size: 2.5rem;
+    width: 100%;
+    margin: 3.5rem 0rem 3rem 0rem;
+    line-height: 3rem; } }
 
 .Repo {
   display: flex;
   justify-content: space-between;
   padding: 0rem 1rem 0rem 1rem; }
 
+@media only screen and (max-width: 56.25em) {
+  .Repo {
+    padding: 0rem 0.5rem 0rem 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Repo {
+    padding: 0rem 0rem 0rem 0rem; } }
+
 .Repo__icon {
   transform: scale(1);
   font-size: 2rem;
+  height: 5%;
+  width: 5%;
   float: left;
   cursor: pointer;
-  transition: 0.20s ease-in-out; }
+  transition: 0.20s ease-in-out;
+  border-radius: 50%; }
 
 .Repo__icon:hover {
   transform: scale(0.7); }
@@ -905,37 +1253,140 @@ header .pizza-svg {
 .Repo__icon:active {
   transform: scale(1); }
 
+@media only screen and (max-width: 75em) {
+  .Repo__icon {
+    height: 7%;
+    width: 7%; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Repo__icon {
+    height: 10%;
+    width: 10%; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Repo__icon {
+    height: 7%;
+    width: 7%; } }
+
 .Repo__name {
   font-size: 1.5rem;
   color: blue; }
+
+@media only screen and (max-width: 75em) {
+  .Repo__name {
+    font-size: 2rem;
+    width: 70%; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Repo__name {
+    font-size: 2rem;
+    width: 60%;
+    margin: 0rem 0rem 1.5rem 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Repo__name {
+    line-height: 2.5rem;
+    font-size: 1.7rem;
+    width: 70%;
+    margin: 0rem 0rem 0.5rem 1rem; } }
 
 .Repo__star {
   font-size: 1rem;
   color: black; }
 
+@media only screen and (max-width: 75em) {
+  .Repo__star {
+    font-size: 2rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Repo__star {
+    font-size: 1.5rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Repo__star {
+    font-size: 1rem; } }
+
 .date {
   width: 70%;
-  margin: 1rem 0rem 1.5rem 5rem;
+  margin: 1rem 0rem 1.5rem 6rem;
   color: #696969;
   font-size: 1rem;
   font-style: italic;
   border-bottom: 0.1rem solid #696969;
   width: 90%; }
 
+@media only screen and (max-width: 75em) {
+  .date {
+    font-size: 1.5rem;
+    margin: 1rem 0rem 4rem 8rem;
+    width: 70%; } }
+
+@media only screen and (max-width: 56.25em) {
+  .date {
+    font-size: 1.5rem;
+    width: 85%;
+    margin: 0rem 0rem 2rem 8rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .date {
+    font-size: 1.5rem;
+    width: 90%;
+    margin: -0.5rem 0rem 2rem 7rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .date {
+    font-size: 1.2rem;
+    width: 90%;
+    margin: -1rem 0rem 2rem 7rem; } }
+
 .pull_container {
   margin: 2rem 3rem 0rem 3rem; }
+
+@media only screen and (max-width: 75em) {
+  .pull_container {
+    margin: 2rem 3rem 0rem 4rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .pull_container {
+    margin: 2rem 3rem 0rem 3rem; } }
 
 .pull_header {
   color: black;
   font-size: 3rem;
-  margin: 5rem 0rem 8rem 0rem; }
+  margin: 3rem 0rem 4rem 0rem; }
+
+@media only screen and (max-width: 75em) {
+  .pull_header {
+    font-size: 3.5rem;
+    width: 80%;
+    line-height: 4rem;
+    margin: 4rem 0rem 6rem 0rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .pull_header {
+    font-size: 2.5rem;
+    width: 80%;
+    line-height: 3rem;
+    margin: 3rem 0rem 5rem 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .pull_header {
+    font-size: 2.5rem;
+    width: 100%;
+    line-height: 3rem;
+    margin: 6rem 0rem 3rem 0rem; } }
 
 .Pull {
   background-color: #9088d4;
-  margin-right: 6rem;
+  margin-right: 8rem;
   padding: 2rem 5rem 0rem 3rem;
   transition: 0.35s ease-in-out;
   border-radius: 1rem; }
+
+@media only screen and (max-width: 56.25em) {
+  .Pull {
+    padding: 2rem 0rem 0rem 3rem;
+    margin: 0rem 1rem 0rem 0rem; } }
 
 .Pull:hover {
   transform: scale(1.05);
@@ -945,8 +1396,21 @@ header .pizza-svg {
   color: black;
   font-size: 1.5rem;
   line-height: 2rem;
-  margin-bottom: 2rem;
+  line-height: 3rem;
   transition: 0.25s ease-in-out; }
+
+@media only screen and (max-width: 75em) {
+  .Pull__text {
+    font-size: 2rem;
+    line-height: 4rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Pull__text {
+    font-size: 1.7rem;
+    line-height: 3rem; } }
+
+.Pull__text > span {
+  color: whitesmoke; }
 
 .title:hover {
   cursor: pointer;
@@ -954,22 +1418,93 @@ header .pizza-svg {
   transform: scale(1.02); }
 
 .publish {
-  padding-bottom: 2rem; }
+  padding-bottom: 1rem;
+  margin-bottom: 2rem; }
+
+@media only screen and (max-width: 75em) {
+  .publish {
+    padding-bottom: 1rem;
+    margin-bottom: 4rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .publish {
+    padding-bottom: 2rem;
+    margin-bottom: 4rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .publish {
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem; } }
 
 .comment_container {
-  margin: 2rem 3rem 0rem 3rem; }
+  margin: 2rem 2rem 0rem 3rem; }
+
+@media only screen and (max-width: 56.25em) {
+  .comment_container {
+    margin: 2rem 0rem 0rem 3rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .comment_container {
+    margin: 3rem 1rem 0rem 2rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .comment_container {
+    margin: 3rem 1rem -1rem 2rem; } }
 
 .comment_header {
   color: black;
   font-size: 3rem;
-  margin: 5rem 0rem 8rem 0rem; }
+  margin: 3rem 0rem 5rem 0rem; }
+
+@media only screen and (max-width: 75em) {
+  .comment_header {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    width: 90%;
+    margin: 3rem 0rem 6rem 0rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .comment_header {
+    line-height: 3rem;
+    font-size: 2.5rem;
+    width: 80%;
+    margin: 3rem 0rem 6rem 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .comment_header {
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    width: 80%;
+    margin: 5rem 0rem 3rem 1rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .comment_header {
+    line-height: 2.7rem;
+    font-size: 2.5rem;
+    width: 90%;
+    margin: 3.5rem 0rem 3rem 1rem; } }
 
 .Comment {
   background-color: #9088d4;
   margin-right: 6rem;
-  padding: 2rem 5rem 0rem 3rem;
+  padding: 1.5rem 5rem 0rem 3rem;
   transition: 0.35s ease-in-out;
   border-radius: 1rem; }
+
+@media only screen and (max-width: 56.25em) {
+  .Comment {
+    padding: 1.5rem 1rem 0rem 1.5rem;
+    margin: 0rem 3rem 3rem 0rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Comment {
+    padding: 1rem 1rem 0rem 1rem;
+    margin: 0rem 2rem 3rem 1rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .Comment {
+    padding: 1rem 1rem 1rem 1rem;
+    margin: 0rem 2rem 2rem 1rem; } }
 
 .Comment:hover {
   transform: scale(1.05);
@@ -980,11 +1515,45 @@ header .pizza-svg {
   font-size: 1.5rem;
   line-height: 2.5rem; }
 
+@media only screen and (max-width: 75em) {
+  .Comment__text {
+    line-height: 3rem;
+    font-size: 2rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .Comment__text {
+    line-height: 2.3rem;
+    font-size: 1.7rem; } }
+
+@media only screen and (max-width: 37.5em) {
+  .Comment__text {
+    line-height: 2.3rem;
+    font-size: 1.5rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .Comment__text {
+    line-height: 2rem;
+    font-size: 1.7rem;
+    padding: 0rem 1rem 0rem 1rem; } }
+
+.Comment__text > span {
+  color: whitesmoke;
+  padding-right: 0.5rem; }
+
 .Comment__repo {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   padding-bottom: 2rem; }
+
+@media only screen and (max-width: 37.5em) {
+  .Comment__repo {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem; } }
 
 .Comment__repo:hover {
   cursor: pointer;
   color: blue;
   transform: scale(1.02); }
+
+.Comment__repo:hover > span {
+  transform: scale(1);
+  padding-left: 0.5rem; }

@@ -27,6 +27,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
+    @if $breakpoint==small-phone {
+        @media only screen and (max-width: 23.75em) {
+            @content
+        }
+        ; //380px
+    }
     @if $breakpoint==phone {
         @media only screen and (max-width: 37.5em) {
             @content
@@ -44,6 +50,12 @@ ORDER: Base + typography > general layout + grid > page layout > components
             @content
         }
         ; //1200px
+    }
+    @if $breakpoint==small-desktop {
+        @media only screen and (min-width: 90em) {
+            @content
+        }
+        ; //1440
     }
     @if $breakpoint==big-desktop {
         @media only screen and (min-width: 112.5em) {

@@ -7,10 +7,10 @@ const PullItem: React.FC<IPullItem> = ({value}) => {
     console.log(value);
     return (
         <div className="Pull">    
-            <h1 className="Pull__text title" onClick={() => window.open(permalink)}>Title : {title}</h1> 
-            <h1 className="Pull__text">State : {state}</h1>
-            <h1 className="Pull__text">Closed at : {moment.utc(closedAt).local().format('YYYY-MM-DD HH:mm:ss')}</h1>
-            <h1 className="Pull__text publish">Published at : {moment.utc(publishedAt).local().format('YYYY-MM-DD HH:mm:ss')}</h1> 
+            <h1 className="Pull__text title" onClick={() => window.open(permalink)}><span className="spanTitle">Title</span> : {title}</h1> 
+            <h1 className="Pull__text"><span>State </span> : {state}</h1>
+            <h1 className="Pull__text"><span>Closed at</span>  : {moment.utc(closedAt).local().format('YYYY-MM-DD HH:mm:ss')}</h1>
+            <h1 className="Pull__text publish"><span>Published at</span>  : {moment.utc(publishedAt).local().format('YYYY-MM-DD HH:mm:ss')}</h1> 
         </div>
         
     )

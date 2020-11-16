@@ -7,6 +7,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 3rem 0rem 0rem 0rem;
+    @include respond(phone) {}
 }
 
 .pull {
@@ -16,10 +18,6 @@
     height: auto;
     width: 500px;
     margin: 2%;
-    //  @include respond(phone) {
-    //     // width < 900?
-    //    height: 1000vw;//1 rem = 8px, 8/16 = 50%
-    // }
 }
 
 .item {
@@ -84,9 +82,13 @@
     .pull_contents {
         color: rgb(219, 215, 215);
         font-size: 2rem;
+        @include respond(phone) {
+            font-size: 4rem;
+            line-height: 6rem;
+        }
     }
     .card_title {
-        color: white;
+        color: rgb(17, 16, 16);
         //font-size: 3rem;
     }
     p {
@@ -104,6 +106,10 @@
     font-size: 1.5rem;
     font-family: 'Oregano';
     transition: 0.15s ease-in-out;
+    @include respond(phone) {
+        font-size: 3rem;
+        line-height: 5rem;
+    }
 }
 
 .card_title {
@@ -111,29 +117,8 @@
     font-family: 'Oregano', cursive;
     font-size: 2rem;
     margin-bottom: 2rem;
+    @include respond(phone) {
+        font-size: 4rem;
+        line-height: 6rem;
+    }
 }
-
-// @media (max-width: 768px) {
-//     // flex-direction: column;
-//     .pull {
-//         flex: 1 1 100%;
-//         //flex-grow: 1;
-//         //background-color: pink;
-//         height: 100px;
-//         width: 500px;
-//         margin: 2%;
-//     }
-//     .item {
-//         //background-color: red;
-//         flex: 1 1 100%;
-//         height: 100px;
-//         margin: 2%;
-//     }
-//     //     .commit {
-//     //     grid-column: 1 / -1;
-//     //     }
-//     //     .forks {
-//     //      grid-column: 1 / -1;
-//     //      grid-row: 10/13;
-//     // }
-// }

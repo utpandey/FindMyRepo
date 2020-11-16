@@ -10,10 +10,14 @@ const CommitItem: React.FC<ICommitItem> = ({value}) => {
         // <List ordered>
         // <List.Item as='a'>
         <div className="Comment">    
-            <h1 className="Comment__text">body : {body}</h1>
-            <h1 className="Comment__text">position : {position ? position : "Not Available"} </h1>
-            <h1 className="Comment__text">publishedAt : {publishedAt}</h1>
-            <h1 className="Comment__text Comment__repo" onClick={() => window.open(url)}>repository : {name}</h1> 
+            <h1 className="Comment__text"><span>Body</span>:{" "}
+                {body}</h1>
+            <h1 className="Comment__text"><span>Position</span>:{" "}
+                {position ? position : "Not Available"} </h1>
+            <h1 className="Comment__text"><span>Published at</span>:{" "}
+                {publishedAt}</h1>
+            <h1 className="Comment__text Comment__repo" onClick={() => window.open(url)}>
+                <span>Repository</span>:{" "} {name}</h1> 
         </div>
         
     )

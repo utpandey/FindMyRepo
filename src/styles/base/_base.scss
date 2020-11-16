@@ -32,6 +32,9 @@ div {
 html {
     // This defines what 1rem is
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+    @include respond(small-desktop) {
+        font-size: 60%; //1rem = 12, 12/16
+    }
     @include respond(tab-land) {
         // width < 1200?
         font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
@@ -44,8 +47,12 @@ html {
         // width < 900?
         font-size: 36%; //1 rem = 8px, 8/16 = 50%
     }
+    @include respond(small-phone) {
+        // width < 900?
+        font-size: 36%; //1 rem = 8px, 8/16 = 50%
+    }
     @include respond(big-desktop) {
-        font-size: 75%; //1rem = 12, 12/16
+        font-size: 95%; //1rem = 12, 12/16
     }
 }
 

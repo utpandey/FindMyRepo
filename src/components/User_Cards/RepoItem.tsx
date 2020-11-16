@@ -14,7 +14,7 @@ const RepoItem: React.FC<IRepoItem>  = ({value}) => {
     return (
       <React.Fragment>    
         <div className="Repo">
-            <img src={github__repo} alt="Github" className="Repo__icon" onClick={() => window.open(url)}/>
+            <img src={openGraphImageUrl} alt="Github" className="Repo__icon" onClick={() => window.open(url)}/>
             <p className="Repo__name">{nameWithOwner}</p>
             <span className="Repo__star">&#x2B50;{' '}{stargazerCount}</span>
         </div>

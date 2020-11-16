@@ -24,8 +24,8 @@ const PinItem: React.FC<IPinItem> = ({value}) => {
             </div>    
             {/* <h1 className="Pin__text">nameWithOwner : {nameWithOwner}</h1> 
             <h1 className="Pin__text">stargazerCount : {stargazerCount}</h1> */}
-            <h1 className="Pin__text">Fork Count : {forkCount}</h1>
-            <p className="Pin__desc">Description :{description ? description : "Not Available"}</p>
+            <h1 className="Pin__text"><span>Fork Count</span> : {forkCount}</h1>
+            <p className="Pin__desc"><span>Description</span> :{description ? description : "Not Available"}</p>
             {/* <p className="Pin__lic">License used : {nickname ? nickname : "Not Provided"}</p>  */}
         </div>
         

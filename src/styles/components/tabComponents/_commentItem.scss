@@ -1,17 +1,66 @@
-.comment_container{
-    margin: 2rem 3rem 0rem 3rem;
+.comment_container {
+    margin: 2rem 2rem 0rem 3rem;
+    //background-color: yellowgreen;
+    @include respond(tab-port) {
+        margin: 2rem 0rem 0rem 3rem;
+    }
+    @include respond(phone) {
+        margin: 3rem 1rem 0rem 2rem;
+    }
+    @include respond(small-phone) {
+        margin: 3rem 1rem -1rem 2rem;
+    }
 }
-.comment_header{
+
+.comment_header {
     color: black;
     font-size: 3rem;
-    margin: 5rem 0rem 8rem 0rem;
+    margin: 3rem 0rem 5rem 0rem;
+    @include respond(tab-land) {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        width: 90%;
+        margin: 3rem 0rem 6rem 0rem;
+    }
+    @include respond(tab-port) {
+        line-height: 3rem;
+        font-size: 2.5rem;
+        width: 80%;
+        margin: 3rem 0rem 6rem 0rem;
+    }
+    @include respond(phone) {
+        line-height: 2.5rem;
+        font-size: 2.5rem;
+        width: 80%;
+        margin: 5rem 0rem 3rem 1rem;
+    }
+    @include respond(small-phone) {
+        line-height: 2.7rem;
+        font-size: 2.5rem;
+        width: 90%;
+        margin: 3.5rem 0rem 3rem 1rem;
+    }
 }
+
 .Comment {
     background-color: #9088d4;
     margin-right: 6rem;
-    padding: 2rem 5rem 0rem 3rem;
+    padding: 1.5rem 5rem 0rem 3rem;
     transition: 0.35s ease-in-out;
     border-radius: 1rem;
+    //background-color: yellow;
+    @include respond(tab-port) {
+        padding: 1.5rem 1rem 0rem 1.5rem;
+        margin: 0rem 3rem 3rem 0rem;
+    }
+    @include respond(phone) {
+        padding: 1rem 1rem 0rem 1rem;
+        margin: 0rem 2rem 3rem 1rem;
+    }
+    @include respond(small-phone) {
+        padding: 1rem 1rem 1rem 1rem;
+        margin: 0rem 2rem 2rem 1rem;
+    }
     &:hover {
         transform: scale(1.05);
         box-shadow: 0.5rem 0.5rem 2rem #888888;
@@ -20,15 +69,43 @@
         color: black;
         font-size: 1.5rem;
         line-height: 2.5rem;
+        @include respond(tab-land) {
+            line-height: 3rem;
+            font-size: 2rem;
+        }
+        @include respond(tab-port) {
+            line-height: 2.3rem;
+            font-size: 1.7rem;
+        }
+        @include respond(phone) {
+            line-height: 2.3rem;
+            font-size: 1.5rem;
+        }
+        @include respond(small-phone) {
+            line-height: 2rem;
+            font-size: 1.7rem;
+            padding: 0rem 1rem 0rem 1rem;
+        }
+        &>span {
+            color: whitesmoke;
+            padding-right: 0.5rem;
+        }
     }
-    &__repo{
-        margin-bottom: 3rem;
+    &__repo {
+        margin-bottom: 1.5rem;
         padding-bottom: 2rem;
+        @include respond(phone) {
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
     }
-    &__repo:hover{
+    &__repo:hover {
         cursor: pointer;
         color: blue;
         transform: scale(1.02);
-        
+        &>span {
+            transform: scale(1);
+            padding-left: 0.5rem;
+        }
     }
 }

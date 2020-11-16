@@ -46,7 +46,7 @@ const RepositoryList: React.FC<IUser> = ({ searchTerm }) => {
     // const [expandedRepo, setExpandedRepo] = useState(null);
     const [debouncedSearchTerm] = useDebounce(searchTerm, 1000);
     const { data, loading } = useQuery(SEARCH_FOR_REPOS, { variables: { search_term: debouncedSearchTerm } });
-
+    console.log(data);
     if (loading) {
         return ( <div  className="loader">
             <div className=""/>

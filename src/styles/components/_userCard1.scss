@@ -1,10 +1,60 @@
+.repoError {
+    text-align: center;
+    padding: 10rem;
+}
+
+.loader__user {
+    display: flex;
+    align-self: center;
+    margin-top: 10rem;
+    padding: 0rem 0rem 0rem 0rem;
+    justify-content: space-around;
+    align-items: flex-end;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+}
+
+.loader__user div {
+    width: 20px;
+    height: 20px;
+    background: #b3b5b8;
+    border-radius: 50%;
+    animation: loader__user 0.5s cubic-bezier(.19, .57, .3, .98) infinite alternate;
+}
+
+.loader__user div:nth-child(2) {
+    animation-delay: 0.1s;
+    opacity: 0.8;
+}
+
+.loader__user div:nth-child(3) {
+    animation-delay: 0.2s;
+    opacity: 0.6;
+}
+
+.loader__user div:nth-child(4) {
+    animation-delay: 0.3s;
+    opacity: 0.4;
+}
+
+@keyframes loader__user {
+    from {
+        transform: translateY(0)
+    }
+    to {
+        transform: translateY(-100px)
+    }
+}
+
 @import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
 .user_card {
     height: 60rem; //50
     width: 100rem; //45
     background: #fff;
     font-family: Roboto;
-    display: block;
+    display: flex;
+    align-self: center;
     position: absolute;
     margin-top: 12rem;
     margin-bottom: 2rem;
@@ -13,6 +63,26 @@
     transition: all 0.2s ease-in-out;
     &:hover {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    }
+    @include respond(tab-land) {
+        margin-top: 15rem;
+        height: 90rem; //50
+        width: 90rem; //45
+    }
+    @include respond(tab-port) {
+        margin-top: 15rem;
+        height: 80rem; //50
+        width: 60rem; //45
+    }
+    @include respond(phone) {
+        margin-top: 23rem;
+        height: 80rem; //50
+        width: 60rem; //45
+    }
+    @include respond(small-phone) {
+        margin-top: 20rem;
+        height: 80rem; //50
+        width: 50rem; //45
     }
 }
 
@@ -60,6 +130,10 @@
         width: 100%;
         border-radius: 50%;
     }
+    @include respond(small-phone) {
+        width: 12rem;
+        height: 12rem;
+    }
 }
 
 .active .avatar {
@@ -82,7 +156,7 @@
 .fabs {
     position: absolute;
     margin-top: -4rem;
-    margin-left: 90rem;
+    margin-left: 92rem;
     overflow: hidden;
     width: 15rem;
     height: 15rem;
@@ -90,6 +164,21 @@
     transition: 1s ease-in-out;
     //border-radius: 50%;
     justify-content: center;
+    @include respond(tab-land) {
+        margin-left: 80rem;
+    }
+    @include respond(tab-port) {
+        margin-left: 50rem;
+    }
+    @include respond(phone) {
+        margin-left: 22rem;
+        margin-top: -11rem;
+    }
+    @include respond(small-phone) {
+        margin-left: 18rem;
+        margin-top: -10rem;
+        //margin-left: 50%;
+    }
 }
 
 .active .fabs {
@@ -114,6 +203,10 @@
     display: flex;
     flex-direction: row;
     //justify-content: flex-end;
+    @include respond(phone) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
     &_tabs {
         flex: 0.5;
         // position: absolute;
@@ -126,17 +219,26 @@
         height: 100%;
         //margin-bottom: 5rem;
         //background-color: darkblue;
+        @include respond(tab-land) {
+            width: 20%;
+        }
+        @include respond(tab-port) {
+            width: 20%;
+        }
+        @include respond(phone) {
+            display: flex;
+            flex-direction: row;
+            //flex: 1;
+            width: 100%;
+            height: 100%;
+        }
         .tabitem {
-             --initialTextColor: #FFF;
+            --initialTextColor: #FFF;
             --slideTextColor: #272838;
-
             --initialBgColor: #7E57C2;
             --slideBgColor: #FFF;
             //border: 1px solid #fff;
             cursor: pointer;
-            //margin: 1rem;
-            //padding: 1rem;
-            //width: 24%;
             height: 25%;
             //height: 100%;
             text-align: center;
@@ -144,15 +246,21 @@
             background-color: #7E57C2;
             display: flex;
             flex-direction: column;
-            background-image: linear-gradient(90deg,
-            var(--initialBgColor) 0%,
-            var(--initialBgColor) 50%,
-            var(--slideBgColor) 50%,
-            var(--slideBgColor) 100%);
+            background-image: linear-gradient(90deg, var(--initialBgColor) 0%, var(--initialBgColor) 50%, var(--slideBgColor) 50%, var(--slideBgColor) 100%);
             background-size: 200%;
-            transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
-            color .2s linear;
-            transition-delay: 0.0s, 0.15s;
+            transition: background-position .3s cubic-bezier(.47, .1, 1, .63), color .2s linear;
+            @include respond(phone) {
+                height: 12rem;
+                width: 100%;
+                top: 5rem;
+            }
+            transition-delay: 0.0s,
+            0.15s;
+            @include respond(small-phone) {
+                height: 10rem;
+                width: 100%;
+                margin-top: 2rem;
+            }
         }
         .tabitem:hover {
             color: var(--slideTextColor);
@@ -166,9 +274,12 @@
         .tabitem__icon {
             height: 100%;
             color: rgba(255, 255, 255, 0.9);
-            margin: -1rem 0rem 1rem 0rem;
+            //margin: -1rem 0rem 1rem 0rem;
             transform: scale(0.2);
             font-size: 1rem;
+            @include respond(small-phone) {
+                transform: scale(0.3);
+            }
         }
         .tabitem__title {
             //display: none;
@@ -176,10 +287,13 @@
             //color: rgba(255, 255, 255, 0.9);
             //display: block;
             //top: -20rem;
-            // color: dimgrey;
-            color: var(--initialTextColor);
+            color: black;
+            //color: var(--initialTextColor);
             margin-top: -3rem;
             font-size: 1.2rem;
+            @include respond(small-phone) {
+                display: none;
+            }
             //margin: 1rem 0;
         }
     }
@@ -187,6 +301,7 @@
         flex: 3;
         //width: 35rem;
         //text-align: center;
+        @include respond(phone) {}
     }
 }
 

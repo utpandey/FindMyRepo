@@ -1,44 +1,132 @@
-.repo_container{
+.repo_container {
     margin: 2rem 3rem 0rem 3rem;
 }
+
 .repo_header {
     color: black;
     font-size: 3rem;
-    margin: 5rem 0rem 8rem 0rem;
+    margin: 5rem 0rem 5rem 0rem;
+    @include respond(tab-land) {
+        margin-bottom: 10rem;
+    }
+    @include respond(tab-port) {
+        width: 80%;
+        font-size: 2.5rem;
+        margin-bottom: 4rem;
+        margin-top: 2rem;
+    }
+    @include respond(phone) {
+        font-size: 2.5rem;
+        width: 100%;
+        margin-bottom: 3rem;
+        margin-top: 4.5rem;
+    }
+    @include respond(small-phone) {
+        font-size: 2.5rem;
+        width: 100%;
+        margin: 3.5rem 0rem 3rem 0rem;
+        line-height: 3rem;
+    }
 }
-.Repo{
+
+.Repo {
     display: flex;
     justify-content: space-between;
     padding: 0rem 1rem 0rem 1rem;
-    
+    @include respond(tab-port) {
+        padding: 0rem 0.5rem 0rem 0rem;
+    }
+    @include respond(phone) {
+        padding: 0rem 0rem 0rem 0rem;
+    }
     &__icon {
-        transform:scale(1);
+        transform: scale(1);
         font-size: 2rem;
+        height: 5%;
+        width: 5%;
         float: left;
         cursor: pointer;
         transition: 0.20s ease-in-out;
-        &:hover{
+        border-radius: 50%;
+        &:hover {
             transform: scale(0.7);
         }
-        &:active{
+        &:active {
             transform: scale(1);
         }
+        @include respond(tab-land) {
+            height: 7%;
+            width: 7%;
+        }
+        @include respond(tab-port) {
+            height: 10%;
+            width: 10%;
+        }
+        @include respond(phone) {
+            height: 7%;
+            width: 7%;
+        }
     }
-    &__name{
+    &__name {
         font-size: 1.5rem;
         color: blue;
+        @include respond(tab-land) {
+            font-size: 2rem;
+            width: 70%;
+        }
+        @include respond(tab-port) {
+            font-size: 2rem;
+            width: 60%;
+            margin: 0rem 0rem 1.5rem 0rem;
+        }
+        @include respond(phone) {
+            line-height: 2.5rem;
+            font-size: 1.7rem;
+            width: 70%;
+            margin: 0rem 0rem 0.5rem 1rem;
+        }
     }
     &__star {
         font-size: 1rem;
         color: black;
+        @include respond(tab-land) {
+            font-size: 2rem;
+        }
+        @include respond(tab-port) {
+            font-size: 1.5rem;
+        }
+        @include respond(phone) {
+            font-size: 1rem;
+        }
     }
 }
-.date{
+
+.date {
     width: 70%;
-    margin: 1rem 0rem 1.5rem 5rem;
+    margin: 1rem 0rem 1.5rem 6rem;
     color: #696969;
     font-size: 1rem;
     font-style: italic;
     border-bottom: 0.1rem solid #696969;
     width: 90%;
+    @include respond(tab-land) {
+        font-size: 1.5rem;
+        margin: 1rem 0rem 4rem 8rem;
+        width: 70%;
+    }
+    @include respond(tab-port) {
+        font-size: 1.5rem;
+        width: 85%;
+        margin: 0rem 0rem 2rem 8rem;
+    }
+    @include respond(phone) {
+        font-size: 1.5rem;
+        width: 90%;
+        margin: -0.5rem 0rem 2rem 7rem;
+    }
+    @include respond(small-phone) {
+        font-size: 1.2rem;
+        width: 90%;
+        margin: -1rem 0rem 2rem 7rem;
+    }
 }

@@ -84,18 +84,20 @@ const User: React.FC<IUser> = ({ searchTerm }) => {
     );
 
     if (loading) {
-        return (
-            <div >
-            Loading...
+        return ( <div  className="loader__user">
+            <div className=""/>
+            <div className=""/>
+            <div className=""/>
+            <div className=""/>
             </div>
-    );
-}
+        );
+    }
 
 if (error) {
     return (
     <div
-    >
-        error
+    className="repoError">
+        There are no such Users!
     </div>
     )
 }

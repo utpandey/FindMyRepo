@@ -45,21 +45,21 @@ const Home = () => {
         <Link to='/users'>
           <motion.h3
             className="home_title"
-            whileHover={{color: 'black',scale: '0.9'}}
+            // whileHover={{color: 'black',scale: '0.9'}}
           >
-          User
+            User
           </motion.h3>
         </Link>
         <Link to='/repolist'>
           <motion.h3
             className="home_title"
-            whileHover={{color: 'black',scale: '0.9'}}
+            // whileHover={{ color: 'black', scale: '0.9' }}
           >
-              Repository
+            Repository
           </motion.h3>
         </Link>
       </div>
-      <Loader />
+      {/* <Loader /> */}
       {/* <Link to="/base">
         <motion.button
           variants={buttonVariants}

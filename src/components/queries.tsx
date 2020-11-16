@@ -2,6 +2,11 @@ import gql from 'graphql-tag';
 
 export const SEARCH_FOR_USERS = gql ` 
     query search_for_users($search_term: String!){
+        rateLimit{
+            cost
+            remaining
+            resetAt
+        }
         user(login:$search_term){
             avatarUrl(size: 480)
             bio
@@ -12,7 +17,7 @@ export const SEARCH_FOR_USERS = gql `
             resourcePath
             websiteUrl
             url
-            commitComments(last:2){
+            commitComments(last:3){
                 totalCount,
                 edges{
                     node{
@@ -53,7 +58,7 @@ export const SEARCH_FOR_USERS = gql `
             projects(last:5){
                 totalCount
             }
-            pullRequests(last:2){
+            pullRequests(last:3){
                 totalCount,
                 edges{
                     node{
@@ -87,35 +92,6 @@ export const SEARCH_FOR_USERS = gql `
             }
         }
     }`;
-
-
-
-
-
-
-
-// # repository(owner:$search_term,name:$search_term) {
-// #     owner{
-// #         id
-// #     },
-// #     issues(last:20, states:CLOSED) {
-// #     edges {
-// #         node {
-// #         title
-// #         url
-// #         labels(first:5) {
-// #             edges {
-// #             node {
-// #                 name
-// #             }
-// #             }
-// #         }
-// #         }
-// #         }
-// #     }
-// # }
-
-
 
 export const SEARCH_FOR_REPOS = gql `
     query($search_term: String!) {
@@ -175,19 +151,19 @@ export const SEARCH_FOR_REPOS = gql `
                         #     #     }
                         #     # }
                         # },
-                        mentionableUsers(first:2){
+                        mentionableUsers(last:2){
                             totalCount,
                             edges{node{
                                 login,name
                             }}
                         },
-                        assignableUsers(first:2){
+                        assignableUsers(last:2){
                             totalCount,
                             edges{node{
                                 login,name
                             }}
                         },
-                        commitComments(first:5) {
+                        commitComments(last:5) {
                             totalCount,
                             edges {
                                 node {
@@ -197,7 +173,7 @@ export const SEARCH_FOR_REPOS = gql `
                                 }
                             }
                         },
-                        forks(first:2) {
+                        forks(last:2) {
                             totalCount,totalDiskUsage,
                             edges {
                                 node {
@@ -206,7 +182,7 @@ export const SEARCH_FOR_REPOS = gql `
                                 }
                             }
                         },
-                        issues(first:2) {
+                        issues(last:2) {
                             totalCount,
                             edges{
                                 node{
@@ -214,7 +190,7 @@ export const SEARCH_FOR_REPOS = gql `
                                 }
                             }
                         }, #orderBy: LabelOrder = {field: CREATED_AT, direction: ASC}
-                        labels(first:3) {
+                        labels(last:3) {
                             totalCount,
                             edges{
                                 node{
@@ -222,7 +198,7 @@ export const SEARCH_FOR_REPOS = gql `
                                 }   
                             }
                         },
-                        languages(first:10) {
+                        languages(last:10) {
                             totalCount,totalSize,
                             edges{
                                 node{
@@ -230,7 +206,7 @@ export const SEARCH_FOR_REPOS = gql `
                                 }
                             }
                         },
-                        pullRequests(first:2) {
+                        pullRequests(last:2) {
                             totalCount,
                             edges {
                                 node{
@@ -241,7 +217,7 @@ export const SEARCH_FOR_REPOS = gql `
                                 }
                             }
                         },
-                        packages(first:2){
+                        packages(last:2){
                             totalCount,
                             edges{
                                 node{
@@ -249,7 +225,7 @@ export const SEARCH_FOR_REPOS = gql `
                                 }
                             }
                         },
-                        watchers(first:2){
+                        watchers(last:2){
                             totalCount,
                             edges{
                                 node{
@@ -271,12 +247,12 @@ export const GET_REPO_ISSUES = gql `
             description
             url
             homepageUrl
-            issues(first: 20, states: [OPEN], orderBy: {field: CREATED_AT, direction: DESC}) {
+            issues(last: 20, states: [OPEN], orderBy: {field: CREATED_AT, direction: DESC}) {
                 nodes {
                     title,
                     bodyHTML,
                     createdAt
-                    comments(first:20){
+                    comments(last:20){
                         nodes {
                             bodyHTML
                         }

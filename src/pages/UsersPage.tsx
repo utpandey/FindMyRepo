@@ -1,14 +1,8 @@
 import { ApolloProvider,InMemoryCache,NormalizedCacheObject } from '@apollo/react-hooks';
 import client from '../components/client';
-import React, { useState, useEffect } from 'react';
-// import SearchBar from '../components/SearchBar'
+import React, { useState} from 'react';
 import SearchBar from '../components/SearchBar';
 import User from '../components/User';
-import { motion } from 'framer-motion';
-import { useLazyQuery } from "@apollo/client";
-import { SEARCH_FOR_USERS } from '../components/queries';
-import { useDebounce } from "use-debounce";
-// import SearchBar from './../components/SearchBar';
 
 const UsersPage = () => {
 
