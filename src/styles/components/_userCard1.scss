@@ -109,7 +109,7 @@
     visibility: visible;
     border-radius: 1rem;
     transition: margin-top 0.5s ease-in-out, margin-left 0.6s ease-in-out, transform 0.4s 0.3s ease-in-out, visibility 0.4s ease-in-out;
-   // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    // box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     @include respond(tab-land) {
        transform: scale(20.2);
     }
@@ -145,7 +145,7 @@
 .active .avatar {
     transform: scale(1.2);
     margin-top: 5rem;
-    margin-left: 39rem;
+    margin-left: 41rem;
     transition: 0.6s ease-in-out;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     &>img {
@@ -174,7 +174,7 @@
 .fabs {
     position: absolute;
     margin-top: -4rem;
-    margin-left: 92rem;
+    margin-left: 95rem;
     overflow: hidden;
     width: 15rem;
     height: 15rem;
@@ -333,8 +333,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    margin: 25rem 0rem 0rem 0rem;
-    //background-color: black;
+    margin: 25rem 0rem 0rem 2rem;
     text-align: center;
     visibility: hidden;
     transition: 0.5s cubic-bezier(.55, 0, .1, 1);
@@ -350,6 +349,10 @@
 
 .active .user {
     visibility: visible;
+    .heading_title {
+        opacity: 1;
+        transition: 0.2s 0.3s cubic-bezier(.55, 0, .1, 1);
+    }
 }
 
 .heading {
@@ -357,9 +360,12 @@
     flex-direction: column;
     align-content: center;
     margin-left: -7rem;
+    
     &_title {
         font-size: 3rem;
         align-content: center;
+        opacity: 0;
+        transition: 0.2s cubic-bezier(.55, 0, .1, 1);
         @include respond(tab-land) {
             font-size: 5rem;
         }
@@ -378,7 +384,7 @@
         &>i {
             margin: 3rem 0rem 3rem 0rem;
             font-size: 3.5rem;
-            color: #37474f;
+            //color: #37474f;
             &:hover {
                 color: purple;
             }

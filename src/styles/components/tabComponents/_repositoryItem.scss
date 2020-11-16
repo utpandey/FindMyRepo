@@ -5,7 +5,10 @@
 .repo_header {
     color: black;
     font-size: 3rem;
-    margin: 5rem 0rem 5rem 0rem;
+    margin: 2rem 0rem 5rem 0rem;
+    @include respond(small-desktop ) {
+       //font-size: 1rem;
+    }
     @include respond(tab-land) {
         margin-bottom: 10rem;
     }

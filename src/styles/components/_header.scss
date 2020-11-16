@@ -33,7 +33,7 @@ header .title {
         font-size: 3.5rem;
         width: 70%;
         border-bottom: 0.1rem solid rgba(204, 204, 204, 0.2);
-        padding: 1rem 0rem 1rem 0rem;
+        padding: 3rem 0rem 1rem 0rem;
     }
 }
 
@@ -41,7 +41,7 @@ header h1 {}
 
 header .pizza-svg {
     //background-color: blue;
-    width: 6rem;
+    width: 8rem;
     //transform: scale(4);
     overflow: visible;
     stroke: #fff;
@@ -49,17 +49,17 @@ header .pizza-svg {
     stroke-linejoin: round;
     stroke-linecap: round;
     /* stroke-miterlimit: "2"; */
-    @include respond(small-desktop) {
-        width: 10rem;
+    @media only screen and (max-width: 1800px) {
+       width: 12rem;;
     }
     @include respond(tab-land) {
-        width: 12rem;
+        width: 16rem;
     }
     @include respond(tab-port) {
-        width: 12rem;
+        width: 14rem;
     }
     @include respond(phone) {
-        width: 15rem;
+        width: 20rem;
     }
 }
 
@@ -67,12 +67,16 @@ header .pizza-svg {
     cursor: pointer;
     //background-color: burlywood;
     //width: 10%;
+    transform: scale(1.6);
+    @media only screen and (max-width: 1800px) {
+        transform: scale(1.2);
+    }
     @include respond(tab-land) {
-        margin-left: 0rem;
+        margin-left: -1rem;
         transform: scale(1.3);
     }
     @include respond(phone) {
-        margin-left: -2rem;
+        margin-left: -4rem;
         transform: scale(1);
     }
     //height: 10%;
