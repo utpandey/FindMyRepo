@@ -417,21 +417,24 @@ header .pizza-svg {
   height: 8rem;
   margin-top: 0;
   width: 100%;
-  margin-left: 50px;
+  margin-left: 5rem;
   visibility: hidden;
   background-color: #ffd54f;
   border-radius: 1rem;
   transform: scale(0);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.22), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: margin-top 0.6s 0.0s ease-in-out, margin-left 0.6s 0.1s ease-in-out, transform 0.6s 0.0s ease-in-out, visibility 0.6s ease-in-out; }
 
 .active .fab {
   margin-top: 50px;
   margin-left: 120px;
-  transform: scale(15);
+  transform: scale(13.2);
   visibility: visible;
-  transition: margin-top 0.5s ease-in-out, margin-left 0.6s ease-in-out, transform 0.4s 0.3s ease-in-out, visibility 0.4s ease-in-out;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  border-radius: 1rem;
+  transition: margin-top 0.5s ease-in-out, margin-left 0.6s ease-in-out, transform 0.4s 0.3s ease-in-out, visibility 0.4s ease-in-out; }
+
+@media only screen and (max-width: 75em) {
+  .active .fab {
+    transform: scale(20.2); } }
 
 .avatar {
   margin-left: 0rem;
@@ -459,7 +462,7 @@ header .pizza-svg {
 .active .avatar {
   transform: scale(1.2);
   margin-top: 5rem;
-  margin-left: 45rem;
+  margin-left: 39rem;
   transition: 0.6s ease-in-out;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
@@ -467,6 +470,21 @@ header .pizza-svg {
   height: 100%;
   width: 100%;
   border-radius: 50%; }
+
+@media only screen and (max-width: 75em) {
+  .active .avatar {
+    transform: scale(1.5);
+    margin-top: 7rem;
+    margin-left: 35rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .active .avatar {
+    transform: scale(1.4);
+    margin-left: 23rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .active .avatar {
+    margin-left: 19rem; } }
 
 .active .avatar:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
@@ -502,7 +520,7 @@ header .pizza-svg {
 .active .fabs {
   margin-top: 0px;
   margin-left: 0px;
-  height: 60rem;
+  height: 100rem;
   width: 100%;
   transition: 0.4s ease-in-out;
   border-radius: 1rem; }
@@ -611,11 +629,19 @@ header .pizza-svg {
 .user {
   position: absolute;
   width: 100%;
-  height: 20rem;
-  margin: 25rem 1rem 0 3rem;
+  height: 100%;
+  margin: 25rem 0rem 0rem 0rem;
   text-align: center;
   visibility: hidden;
   transition: 0.5s cubic-bezier(0.55, 0, 0.1, 1); }
+
+@media only screen and (max-width: 75em) {
+  .user {
+    margin: 35rem 0rem 0rem 0rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .user {
+    margin: 33rem 0rem 0rem 3rem; } }
 
 .active .user {
   visibility: visible; }
@@ -624,11 +650,19 @@ header .pizza-svg {
   display: flex;
   flex-direction: column;
   align-content: center;
-  margin-left: -1rem; }
+  margin-left: -7rem; }
 
 .heading_title {
   font-size: 3rem;
   align-content: center; }
+
+@media only screen and (max-width: 75em) {
+  .heading_title {
+    font-size: 5rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .heading_title {
+    font-size: 5rem; } }
 
 .heading_icons {
   line-height: 40px;
@@ -645,6 +679,15 @@ header .pizza-svg {
 
 .heading_icons > i:hover {
   color: purple; }
+
+@media only screen and (max-width: 75em) {
+  .heading_icons > i {
+    margin: 5rem 0rem 5rem 0rem;
+    font-size: 6rem; } }
+
+@media only screen and (max-width: 56.25em) {
+  .heading_icons > i {
+    margin: 5rem 0rem 5rem 0rem; } }
 
 .active .heading_icons {
   transform: translate(0px, 0px);
@@ -666,19 +709,39 @@ header .pizza-svg {
   color: #37474f; }
 
 .profile > span {
-  line-height: 3rem;
+  line-height: 4.5rem;
   font-size: 3rem;
   font-weight: 600;
   display: block;
   font-style: none;
   color: #37474f; }
 
+@media only screen and (max-width: 75em) {
+  .profile > span {
+    font-size: 4rem;
+    line-height: 5rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .profile > span {
+    font-size: 3.5rem;
+    line-height: 6rem; } }
+
 .active .profile {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 0.5rem 0rem 1rem 0rem;
   transform: translate(0px, 0px);
   opacity: 1;
   transition: 0.3s 0.8s cubic-bezier(0.55, 0, 0.1, 1); }
+
+@media only screen and (max-width: 56.25em) {
+  .active .profile {
+    font-size: 3rem;
+    margin: 1rem 0rem 2rem 0rem; } }
+
+@media only screen and (max-width: 23.75em) {
+  .active .profile {
+    font-size: 2.7rem;
+    margin: 1rem 0rem 2rem 0rem; } }
 
 /* Ripple */
 .ink {
@@ -1350,6 +1413,10 @@ header .pizza-svg {
   .pull_container {
     margin: 2rem 3rem 0rem 3rem; } }
 
+@media only screen and (max-width: 23.75em) {
+  .pull_container {
+    margin: 3rem 3rem -2rem 3rem; } }
+
 .pull_header {
   color: black;
   font-size: 3rem;
@@ -1449,7 +1516,7 @@ header .pizza-svg {
 
 @media only screen and (max-width: 23.75em) {
   .comment_container {
-    margin: 3rem 1rem -1rem 2rem; } }
+    margin: 3rem 1rem -2rem 2rem; } }
 
 .comment_header {
   color: black;
@@ -1479,10 +1546,10 @@ header .pizza-svg {
 
 @media only screen and (max-width: 23.75em) {
   .comment_header {
-    line-height: 2.7rem;
-    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 2.3rem;
     width: 90%;
-    margin: 3.5rem 0rem 3rem 1rem; } }
+    margin: 4rem 0rem 1.5rem 1rem; } }
 
 .Comment {
   background-color: #9088d4;
@@ -1532,9 +1599,9 @@ header .pizza-svg {
 
 @media only screen and (max-width: 23.75em) {
   .Comment__text {
-    line-height: 2rem;
+    line-height: 2.3rem;
     font-size: 1.7rem;
-    padding: 0rem 1rem 0rem 1rem; } }
+    padding: 0rem 1rem -1rem 1rem; } }
 
 .Comment__text > span {
   color: whitesmoke;
