@@ -10,11 +10,11 @@
 This is a React,Typescript project with Scss and Framer motion. The aim is with the help of
 Gihub's GraphQL Api with Apollo Client one can simply look up a User's profile or even 
 a Repository simply by their repo name.  
-
+<!-- 
 ## :movie_camera: DEMO
 <p align="center">
 <img />
-</p>
+</p> -->
 
 ## :desktop_computer: Technology Stack 
 ![react](https://img.shields.io/badge/frontend-react-61dafb?style=flat&logo=React)
