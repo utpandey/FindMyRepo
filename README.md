@@ -66,9 +66,9 @@ a Repository simply by their repo name.
     ```
 
 ## :man_technologist: About me
-[![Twitter](https://img.shields.io/badge/follow-%40khusharth19-1DA1F2?style=flat&logo=Twitter)](https://twitter.com/utsav44) 
+[![Twitter](https://img.shields.io/badge/follow-%40Utsav44-1DA1F2?style=flat&logo=Twitter)](https://twitter.com/utsav44) 
 
-[![LinkedIn](https://img.shields.io/badge/connect-%40khusharthpatani-%230077B5?style=flat&logo=LinkedIn)](https://www.linkedin.com/in/utshav-pandey-9b00a4190/)
+[![LinkedIn](https://img.shields.io/badge/connect-%40utsavpandey-%230077B5?style=flat&logo=LinkedIn)](https://www.linkedin.com/in/utshav-pandey-9b00a4190/)
 
 ## :page_with_curl: Licence 
 
