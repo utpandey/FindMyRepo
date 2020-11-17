@@ -18,4 +18,4 @@ a Repository simply by their repo name.
 
 ## :desktop_computer: Technology Stack 
 ![react](https://img.shields.io/badge/frontend-react-61dafb?style=flat&logo=React)
-![typescript](https://img.shields.io/badge/typescript-%007ACC?style=flat&logo=TypeScript)
+![typescript](https://img.shields.io/badge/typescript-007acc?style=flat&logo=TypeScript)
