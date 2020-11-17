@@ -1,7 +1,7 @@
 # FindMyRepo 
 <br/>
 <img src="/images/Find3.gif" width="200" height="200" />
-![FindMyRepo Logo]( =100x20)
+<!-- ![FindMyRepo Logo]( =100x20) -->
 <br/>
  <img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
 
