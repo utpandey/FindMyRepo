@@ -32,12 +32,13 @@ a Repository simply by their repo name.
 * [Framer-Motion](https://www.framer.com/motion/)
 * [Scss](https://sass-lang.com/)
 
+
 #### Api
 * Github's GraphQL Api for querying user data : [Github API v4](https://docs.github.com/en/free-pro-team@latest/graphql)
 
 #### :grey_question: Prerequisite
 * [node](https://nodejs.org/en/) >= 12.19.1
-* npm >= 6.14.4
+* [npm](https://www.npmjs.com/) >= 6.14.4
 
 ## :wrench: Installation
 
@@ -60,6 +61,15 @@ a Repository simply by their repo name.
     npm start
     ```
 5. To build the project, run the command :
-```
-npm run build
-```
+    ```
+    npm run build
+    ```
+
+## :man_technologist: About me
+[![Twitter](https://img.shields.io/badge/follow-%40khusharth19-1DA1F2?style=flat&logo=Twitter)](https://twitter.com/utsav44) 
+
+[![LinkedIn](https://img.shields.io/badge/connect-%40khusharthpatani-%230077B5?style=flat&logo=LinkedIn)](https://www.linkedin.com/in/utshav-pandey-9b00a4190/)
+
+## :page_with_curl: Licence 
+
+[GPL-3.0 License](https://github.com/khusharth/FindMyRepo/blob/main/LICENSE) Copyright (c) 2020 Utshav Pandey
