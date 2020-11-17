@@ -1,9 +1,8 @@
 # FindMyRepo 
 <br/>
-<!-- <img src="/images/Find3.gif" width="150" height="150" /> -->
 
-
-![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif)
+<img src="https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif" width="150" height="150" />
+<!-- ![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif ) -->
 <br/>
 <!-- <img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> -->
 
