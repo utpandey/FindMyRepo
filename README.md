@@ -2,7 +2,7 @@
 <br/>
 <!-- <img src="/images/Find3.gif" width="150" height="150" /> -->
 
-![FindMyRepo Logo](https://gifyu.com/image/igHv)
+![FindMyRepo Logo](https://giphy.com/gifs/bodGkqdk8nVs3pkCg5)
 <br/>
 <!-- <img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> -->
 
