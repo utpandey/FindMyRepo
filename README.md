@@ -23,3 +23,43 @@ a Repository simply by their repo name.
 ![SCSS](https://img.shields.io/badge/postcss-scss-dd3a0a?style=flat&logo=PostCSS)
 ![GraphQL](https://img.shields.io/badge/graphql-e10098?style=flat&logo=GraphQL)
 ![Apollo](https://img.shields.io/badge/apollo-311c87?style=flat&logo=Apollo-GraphQL)
+
+
+* [React](https://reactjs.org/)
+* [TypeScript](https://www.typescriptlang.org/)
+* [GraphQL](https://graphql.org/)
+* [Apollo](https://www.apollographql.com/)
+* [Framer-Motion](https://www.framer.com/motion/)
+* [Scss](https://sass-lang.com/)
+
+#### Api
+* Github's GraphQL Api for querying user data : [Github API v4](https://docs.github.com/en/free-pro-team@latest/graphql)
+
+#### :grey_question: Prerequisite
+* [node](https://nodejs.org/en/) >= 12.19.1
+* npm >= 6.14.4
+
+## :wrench: Installation
+
+
+1. Clone / Download [this](https://github.com/utpandey/FindMyRepo) repo.
+2. Inside the project open a terminal and run:
+    ```
+    npm install
+    ```
+    This will install all the project dependencies.
+3. Create a **.env** file in the project root folder and add the following:
+    ```
+    REACT_APP_GITHUB_KEY= yourPersonalToken
+    ```
+    Replace yourPersonalToken  with your own **Personal access tokens** .
+
+    > Refer this [official documentation regarding generating personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+4. To start the development server run:
+    ```
+    npm start
+    ```
+5. To build the project, run the command :
+```
+npm run build
+```
