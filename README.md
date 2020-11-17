@@ -2,12 +2,8 @@
 <br/>
 <!-- <img src="/images/Find3.gif" width="150" height="150" /> -->
 
-```html
-<div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/bodGkqdk8nVs3pkCg5" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-</div><p><a href="https://giphy.com/gifs/bodGkqdk8nVs3pkCg5">via GIPHY</a></p>
-```
 
-<!-- ![FindMyRepo Logo](https://giphy.com/gifs/bodGkqdk8nVs3pkCg5) -->
+![FindMyRepo Logo](https://media.giphy.com/media/bodGkqdk8nVs3pkCg5/giphy.gif)
 <br/>
 <!-- <img src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/> -->
 
