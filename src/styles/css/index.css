@@ -63,7 +63,7 @@ html {
   html {
     font-size: 36%; } }
 
-@media only screen and (min-width: 112.5em) {
+@media only screen and (min-width: 150em) {
   html {
     font-size: 95%; } }
 
@@ -1097,7 +1097,7 @@ header .pizza-svg {
 .pin__container {
   height: 100%;
   width: 100%;
-  margin: 2rem 3rem 0rem 3rem; }
+  margin: 0rem 3rem 0rem 3rem; }
 
 @media only screen and (max-width: 37.5em) {
   .pin__container {
@@ -1106,7 +1106,7 @@ header .pizza-svg {
 .pin__header {
   color: black;
   font-size: 3rem;
-  margin: 5rem 0rem 8rem 0rem; }
+  margin: 3rem 0rem 8rem 0rem; }
 
 @media only screen and (max-width: 75em) {
   .pin__header {
@@ -1391,7 +1391,7 @@ header .pizza-svg {
 
 .date {
   width: 70%;
-  margin: 1rem 0rem 2rem 6rem;
+  margin: 1rem 0rem 1rem 6rem;
   color: #696969;
   font-size: 1rem;
   font-style: italic;

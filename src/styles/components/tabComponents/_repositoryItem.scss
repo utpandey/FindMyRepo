@@ -106,12 +106,17 @@
 
 .date {
     width: 70%;
-    margin: 1rem 0rem 2rem 6rem;
+    margin: 1rem 0rem 1rem 6rem;
     color: #696969;
     font-size: 1rem;
     font-style: italic;
     border-bottom: 0.1rem solid #696969;
     width: 90%;
+    // @include respond(big-desktop) {
+    //     font-size: 1.5rem;
+    //     margin: 1rem 0rem 0rem 6rem;
+    //     width: 70%;
+    // }
     @include respond(tab-land) {
         font-size: 1.5rem;
         margin: 1rem 0rem 4rem 8rem;

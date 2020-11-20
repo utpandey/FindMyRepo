@@ -1,7 +1,7 @@
 .pin__container {
     height: 100%;
     width: 100%;
-    margin: 2rem 3rem 0rem 3rem; //align-content: center;
+    margin: 0rem 3rem 0rem 3rem; //align-content: center;
     @include respond(phone) {
         margin: 2rem 0rem 0rem 1.5rem;
     }
@@ -10,7 +10,7 @@
 .pin__header {
     color: black;
     font-size: 3rem;
-    margin: 5rem 0rem 8rem 0rem;
+    margin: 3rem 0rem 8rem 0rem;
     @include respond(tab-land) {
         font-size: 3.5rem;
         line-height: 4rem;

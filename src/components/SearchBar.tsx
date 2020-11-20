@@ -24,6 +24,7 @@ const SearchBar: React.FC<ISearchBar> = ({label,value, onChange,locked,active,pa
                 type="text"
                 value={value}
                 placeholder={label}
+                maxLength={39}
                 onChange={e => onChange(e.target.value)}
             />
             <label className={error && "error"}>
