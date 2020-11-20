@@ -1,22 +1,4 @@
 
-export interface IBaseProps  {
-  addBase:any
-  base: string,
-  toppings: string[],
-  setShowModal:any
-}
-
-export interface IPizza  {
-  addTopping: any,
-  base: string,
-  toppings: string[]
-}
-
-export interface IModal  {
-  showModal: boolean,
-  setShowModal: any
-}
-
 export interface ISearch {
   onClick: any,
   isOpen: any,
@@ -38,7 +20,7 @@ export interface ISearchBar {
 }
 
 export interface IUser {
-  searchTerm: any
+  searchTerm: string
 }
 
 export interface IAbout {

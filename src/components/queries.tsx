@@ -211,7 +211,7 @@ export const SEARCH_FOR_REPOS = gql `
                             edges {
                                 node{
                                     title,number,permalink,additions,
-                                    body,state,createdAt,deletions,
+                                    body,state,createdAt,deletions,bodyText,
                                     publishedAt,author{login},headRepository{name},
                                     headRepositoryOwner{login}
                                 }

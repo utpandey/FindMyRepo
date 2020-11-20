@@ -4,8 +4,6 @@ import { ICommitItem } from '../../interfaces/UserCardTypes/types';
 const CommitItem: React.FC<ICommitItem> = ({value}) => {
     const {node: {body,position,publishedAt,repository:{name},url}} = value;
     console.log(value.node)
-    // console.log(title)
-    // console.log(state)
     return (
         // <List ordered>
         // <List.Item as='a'>

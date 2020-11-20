@@ -23,6 +23,6 @@
     "jsx": "react"
   },
   "include": [
-    "src", "trytra/expanding-animation.tsx", "trytra/og/Modal.tsx"
+    "src"
   ]
 }

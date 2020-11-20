@@ -26,7 +26,7 @@ export interface IPinItem {
 }
 
 export interface IPullItem {
-  key: any,
+  key: number,
   value: {
     node:
     {

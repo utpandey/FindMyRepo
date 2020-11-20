@@ -6,8 +6,8 @@
     color: black;
     font-size: 3rem;
     margin: 2rem 0rem 5rem 0rem;
-    @include respond(small-desktop ) {
-       //font-size: 1rem;
+    @include respond(small-desktop) {
+        //font-size: 1rem;
     }
     @include respond(tab-land) {
         margin-bottom: 10rem;
@@ -106,7 +106,7 @@
 
 .date {
     width: 70%;
-    margin: 1rem 0rem 1.5rem 6rem;
+    margin: 1rem 0rem 2rem 6rem;
     color: #696969;
     font-size: 1rem;
     font-style: italic;

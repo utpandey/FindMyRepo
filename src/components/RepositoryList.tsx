@@ -26,20 +26,6 @@ const repoContainerVariants = {
     },
 }
 
-// const useStyles = makeStyles({
-//     note: {
-//         fontSize: '1.5rem',
-//         marginTop: '1rem',
-//         padding: '1rem',
-//         textAlign: 'center',
-//     },
-//     spinnerContainer: {
-//         display: 'flex',
-//         justifyContent: 'space-around',
-//         marginTop: '1rem'
-//     }
-// });
-
 
 const RepositoryList: React.FC<IUser> = ({ searchTerm }) => {
     // const classes = useStyles();
@@ -56,13 +42,6 @@ const RepositoryList: React.FC<IUser> = ({ searchTerm }) => {
             </div>
         );
     }
-    // if (error) {
-    //   console.log(error)
-    //     return ( <div >
-    //         {error} 
-    //         </div>
-    //     )
-    // }
 
     if (!data.search.repositoryCount) {
         return ( <div className="repoError">
