@@ -73,4 +73,4 @@ a Repository simply by their repo name.
 
 ## :page_with_curl: Licence 
 
-[GPL-3.0 License](https://github.com/khusharth/FindMyRepo/blob/main/LICENSE) Copyright (c) 2020 Utshav Pandey
+[GPL-3.0 License](https://github.com/utpandey/FindMyRepo/blob/main/LICENSE) Copyright (c) 2020 Utshav Pandey
